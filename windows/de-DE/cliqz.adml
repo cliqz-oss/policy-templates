@@ -396,14 +396,14 @@ Wenn Sie die Richtlinieneinstellung deaktivieren oder nicht konfigurieren, werde
 Wenn Sie die Richtlinieneinstellung deaktivieren oder nicht konfigurieren, werden die Standardlesezeichen und Smart-Lesezeichen (meist besuchte, neueste Tags) erstellt.
 
 Hinweis: Diese Richtlinie ist nur wirksam, wenn Sie vor der ersten Ausführung von Firefox verwendet wurde.</string>
-      <string id="HomepageURLs">Set of URL(s) for Home page</string>
-      <string id="HomepageURLs_Explain">If this policy is enabled, you can set one or more URLs as home pages. They are opened in multiple tabs.
+      <string id="HomepageURLs">Festgelegte URL(s) für die Startseite</string>
+      <string id="HomepageURLs_Explain">Mit dieser Richtlinieneinstellung wird definiert, ob eine oder mehrere URLs als Startseite festgelegt werden können. Bei mehreren URLs werden diese in verschiedenen Tabs geöffnet.
 
-If this policy is disabled or not configured, the user can set and change the home page URL(s).</string>
-      <string id="StartupOptions">Startup Options</string>
-      <string id="StartupOptions_Explain">If this policy is enabled, you can set Startup options for Cliqz starts. Here you can also lock all Startup Options.
+Ist diese Richtlinieneinstellung deaktiviert oder nicht festgelegt, kann der Nutzer selbst eine Startseite festlegen.</string>
+      <string id="StartupOptions">Starteinstellungen</string>
+      <string id="StartupOptions_Explain">Mit dieser Richtlinieneinstellung werden die Starteinstellungen für Cliqz festgelegt. Es können ebenfalls alle Starteinstellungen in diesem Bereich gesperrt werden.
 
-If this policy is disabled or not configured, the Startup options will be deafult one.</string>
+Ist diese Richtlinieneinstellung deaktiviert oder nicht festgelegt, werden die Standardstarteinstellungen verwendet.</string>
       <string id="Default">Cliqz-Startseite (Standart)</string>
       <string id="CustomURLs">Benutzerdefinierte Adressen...</string>
       <string id="BlankPage">Leere Seite</string>

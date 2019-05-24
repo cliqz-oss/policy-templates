@@ -1,58 +1,50 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <policyDefinitions revision="1.4" schemaVersion="1.0">
   <policyNamespaces>
-    <target prefix="firefox" namespace="Mozilla.Policies.Firefox"/>
-    <using prefix="Mozilla" namespace="Mozilla.Policies"/>
+    <target prefix="cliqz" namespace="Cliqz.Policies.Cliqz"/>
   </policyNamespaces>
   <resources minRequiredRevision="1.4"/>
   <supportedOn>
     <definitions>
       <definition name="SUPPORTED_WINXPSP2" displayName="$(string.SUPPORTED_WINXPSP2)"/>
-      <definition name="SUPPORTED_FF60" displayName="$(string.SUPPORTED_FF60)"/>
-      <definition name="SUPPORTED_FF60ESR" displayName="$(string.SUPPORTED_FF60ESR)"/>
-      <definition name="SUPPORTED_FF62" displayName="$(string.SUPPORTED_FF62)"/>
-      <definition name="SUPPORTED_FF63" displayName="$(string.SUPPORTED_FF63)"/>
-      <definition name="SUPPORTED_FF64" displayName="$(string.SUPPORTED_FF64)"/>
-      <definition name="SUPPORTED_FF66" displayName="$(string.SUPPORTED_FF66)"/>
+      <definition name="SUPPORTED_CLIQZ_127" displayName="$(string.SUPPORTED_CLIQZ_127)"/>
     </definitions>
   </supportedOn>
   <categories>
-    <category displayName="$(string.firefox)" name="firefox">
-      <parentCategory ref="Mozilla:Cat_Mozilla"/>
-    </category>
+    <category displayName="$(string.cliqz)" name="cliqz"/>
 
     <category displayName="$(string.Authentication_group)" name="Authentication">
-      <parentCategory ref="firefox"/>
+      <parentCategory ref="cliqz"/>
     </category>
     <category displayName="$(string.Popups_group)" name="Popups">
-      <parentCategory ref="firefox"/>
+      <parentCategory ref="cliqz"/>
     </category>
     <category displayName="$(string.Cookies_group)" name="Cookies">
-      <parentCategory ref="firefox"/>
+      <parentCategory ref="cliqz"/>
     </category>
     <category displayName="$(string.Addons_group)" name="Addons">
-      <parentCategory ref="firefox"/>
+      <parentCategory ref="cliqz"/>
     </category>
     <category displayName="$(string.Flash_group)" name="Flash">
-      <parentCategory ref="firefox"/>
+      <parentCategory ref="cliqz"/>
     </category>
     <category displayName="$(string.Bookmarks_group)" name="Bookmarks">
-      <parentCategory ref="firefox"/>
+      <parentCategory ref="cliqz"/>
     </category>
-    <category displayName="$(string.Homepage_group)" name="Homepage">
-      <parentCategory ref="firefox"/>
+    <category displayName="$(string.Startup_group)" name="Startup">
+      <parentCategory ref="cliqz"/>
     </category>
     <category displayName="$(string.Certificates_group)" name="Certificates">
-      <parentCategory ref="firefox"/>
+      <parentCategory ref="cliqz"/>
     </category>
     <category displayName="$(string.Extensions_group)" name="Extensions">
-      <parentCategory ref="firefox"/>
+      <parentCategory ref="cliqz"/>
     </category>
     <category displayName="$(string.Search_group)" name="Search">
-      <parentCategory ref="firefox"/>
+      <parentCategory ref="cliqz"/>
     </category>
     <category displayName="$(string.Permissions_group)" name="Permissions">
-      <parentCategory ref="firefox"/>
+      <parentCategory ref="cliqz"/>
     </category>
     <category displayName="$(string.Camera_group)" name="Camera">
       <parentCategory ref="Permissions"/>
@@ -68,32 +60,32 @@
     </category>
   </categories>
   <policies>
-    <policy name="Authentication_SPNEGO" class="Both" displayName="$(string.Authentication_SPNEGO)"  key="Software\Policies\Mozilla\Firefox\Authentication\SPNEGO" explainText="$(string.Authentication_SPNEGO_Explain)" presentation="$(presentation.Authentication)">
+    <policy name="Authentication_SPNEGO" class="Both" displayName="$(string.Authentication_SPNEGO)"  key="Software\Policies\Cliqz\Authentication\SPNEGO" explainText="$(string.Authentication_SPNEGO_Explain)" presentation="$(presentation.Authentication)">
       <parentCategory ref="Authentication"/>
-      <supportedOn ref="SUPPORTED_FF60"/>
+      <supportedOn ref="SUPPORTED_CLIQZ_127"/>
       <elements>
-        <list id="Authentication" key="Software\Policies\Mozilla\Firefox\Authentication\SPNEGO" valuePrefix=""/>
+        <list id="Authentication" key="Software\Policies\Cliqz\Authentication\SPNEGO" valuePrefix=""/>
       </elements>
     </policy>
-    <policy name="Authentication_Delegated" class="Both" displayName="$(string.Authentication_Delegated)"  key="Software\Policies\Mozilla\Firefox\Authentication\Delegated" explainText="$(string.Authentication_Delegated_Explain)" presentation="$(presentation.Authentication)">
+    <policy name="Authentication_Delegated" class="Both" displayName="$(string.Authentication_Delegated)"  key="Software\Policies\Cliqz\Authentication\Delegated" explainText="$(string.Authentication_Delegated_Explain)" presentation="$(presentation.Authentication)">
       <parentCategory ref="Authentication"/>
-      <supportedOn ref="SUPPORTED_FF60"/>
+      <supportedOn ref="SUPPORTED_CLIQZ_127"/>
       <elements>
-        <list id="Authentication" key="Software\Policies\Mozilla\Firefox\Authentication\Delegated" valuePrefix=""/>
+        <list id="Authentication" key="Software\Policies\Cliqz\Authentication\Delegated" valuePrefix=""/>
       </elements>
     </policy>
-    <policy name="Authentication_NTLM" class="Both" displayName="$(string.Authentication_NTLM)"  key="Software\Policies\Mozilla\Firefox\Authentication\NTLM" explainText="$(string.Authentication_NTLM_Explain)" presentation="$(presentation.Authentication)">
+    <policy name="Authentication_NTLM" class="Both" displayName="$(string.Authentication_NTLM)"  key="Software\Policies\Cliqz\Authentication\NTLM" explainText="$(string.Authentication_NTLM_Explain)" presentation="$(presentation.Authentication)">
       <parentCategory ref="Authentication"/>
-      <supportedOn ref="SUPPORTED_FF60"/>
+      <supportedOn ref="SUPPORTED_CLIQZ_127"/>
       <elements>
-        <list id="Authentication" key="Software\Policies\Mozilla\Firefox\Authentication\NTLM" valuePrefix=""/>
+        <list id="Authentication" key="Software\Policies\Cliqz\Authentication\NTLM" valuePrefix=""/>
       </elements>
     </policy>
-    <policy name="Authentication_AllowNonFQDN" class="Both" displayName="$(string.Authentication_AllowNonFQDN)"  key="Software\Policies\Mozilla\Firefox\Authentication\AllowNonFQDN" explainText="$(string.Authentication_AllowNonFQDN_Explain)" presentation="$(presentation.Authentication_AllowNonFQDN)">
+    <policy name="Authentication_AllowNonFQDN" class="Both" displayName="$(string.Authentication_AllowNonFQDN)"  key="Software\Policies\Cliqz\Authentication\AllowNonFQDN" explainText="$(string.Authentication_AllowNonFQDN_Explain)" presentation="$(presentation.Authentication_AllowNonFQDN)">
       <parentCategory ref="Authentication"/>
       <supportedOn ref="SUPPORTED_FF62"/>
       <elements>
-        <boolean id="Authentication_AllowNonFQDN_NTLM" key="Software\Policies\Mozilla\Firefox\Authentication\AllowNonFQDN" valueName="NTLM">
+        <boolean id="Authentication_AllowNonFQDN_NTLM" key="Software\Policies\Cliqz\Authentication\AllowNonFQDN" valueName="NTLM">
           <trueValue>
             <decimal value="1"/>
           </trueValue>
@@ -101,7 +93,7 @@
             <decimal value="0"/>
           </falseValue>
         </boolean>
-        <boolean id="Authentication_AllowNonFQDN_SPNEGO" key="Software\Policies\Mozilla\Firefox\Authentication\AllowNonFQDN" valueName="SPNEGO">
+        <boolean id="Authentication_AllowNonFQDN_SPNEGO" key="Software\Policies\Cliqz\Authentication\AllowNonFQDN" valueName="SPNEGO">
           <trueValue>
             <decimal value="1"/>
           </trueValue>
@@ -111,9 +103,9 @@
         </boolean>
       </elements>
     </policy>
-    <policy name="BlockAboutAddons" class="Both" displayName="$(string.BlockAboutAddons)" explainText="$(string.BlockAboutAddons_Explain)" key="Software\Policies\Mozilla\Firefox" valueName="BlockAboutAddons">
-      <parentCategory ref="firefox"/>
-      <supportedOn ref="SUPPORTED_FF60"/>
+    <policy name="BlockAboutAddons" class="Both" displayName="$(string.BlockAboutAddons)" explainText="$(string.BlockAboutAddons_Explain)" key="Software\Policies\Cliqz" valueName="BlockAboutAddons">
+      <parentCategory ref="cliqz"/>
+      <supportedOn ref="SUPPORTED_CLIQZ_127"/>
       <enabledValue>
         <decimal value="1"/>
       </enabledValue>
@@ -121,9 +113,9 @@
         <decimal value="0"/>
       </disabledValue>
     </policy>
-    <policy name="BlockAboutConfig" class="Both" displayName="$(string.BlockAboutConfig)" explainText="$(string.BlockAboutConfig_Explain)" key="Software\Policies\Mozilla\Firefox" valueName="BlockAboutConfig">
-      <parentCategory ref="firefox"/>
-      <supportedOn ref="SUPPORTED_FF60"/>
+    <policy name="BlockAboutConfig" class="Both" displayName="$(string.BlockAboutConfig)" explainText="$(string.BlockAboutConfig_Explain)" key="Software\Policies\Cliqz" valueName="BlockAboutConfig">
+      <parentCategory ref="cliqz"/>
+      <supportedOn ref="SUPPORTED_CLIQZ_127"/>
       <enabledValue>
         <decimal value="1"/>
       </enabledValue>
@@ -131,9 +123,9 @@
         <decimal value="0"/>
       </disabledValue>
     </policy>
-    <policy name="BlockAboutProfiles" class="Both" displayName="$(string.BlockAboutProfiles)" explainText="$(string.BlockAboutProfiles_Explain)" key="Software\Policies\Mozilla\Firefox" valueName="BlockAboutProfiles">
-      <parentCategory ref="firefox"/>
-      <supportedOn ref="SUPPORTED_FF60"/>
+    <policy name="BlockAboutProfiles" class="Both" displayName="$(string.BlockAboutProfiles)" explainText="$(string.BlockAboutProfiles_Explain)" key="Software\Policies\Cliqz" valueName="BlockAboutProfiles">
+      <parentCategory ref="cliqz"/>
+      <supportedOn ref="SUPPORTED_CLIQZ_127"/>
       <enabledValue>
         <decimal value="1"/>
       </enabledValue>
@@ -141,9 +133,9 @@
         <decimal value="0"/>
       </disabledValue>
     </policy>
-    <policy name="BlockAboutSupport" class="Both" displayName="$(string.BlockAboutSupport)" explainText="$(string.BlockAboutSupport_Explain)" key="Software\Policies\Mozilla\Firefox" valueName="BlockAboutSupport">
-      <parentCategory ref="firefox"/>
-      <supportedOn ref="SUPPORTED_FF60"/>
+    <policy name="BlockAboutSupport" class="Both" displayName="$(string.BlockAboutSupport)" explainText="$(string.BlockAboutSupport_Explain)" key="Software\Policies\Cliqz" valueName="BlockAboutSupport">
+      <parentCategory ref="cliqz"/>
+      <supportedOn ref="SUPPORTED_CLIQZ_127"/>
       <enabledValue>
         <decimal value="1"/>
       </enabledValue>
@@ -151,9 +143,9 @@
         <decimal value="0"/>
       </disabledValue>
     </policy>
-    <policy name="Certificates_ImportEnterpriseRoots" class="Both" displayName="$(string.Certificates_ImportEnterpriseRoots)" explainText="$(string.Certificates_ImportEnterpriseRoots_Explain)" key="Software\Policies\Mozilla\Firefox\Certificates" valueName="ImportEnterpriseRoots">
+    <policy name="Certificates_ImportEnterpriseRoots" class="Both" displayName="$(string.Certificates_ImportEnterpriseRoots)" explainText="$(string.Certificates_ImportEnterpriseRoots_Explain)" key="Software\Policies\Cliqz\Certificates" valueName="ImportEnterpriseRoots">
       <parentCategory ref="Certificates"/>
-      <supportedOn ref="SUPPORTED_FF60"/>
+      <supportedOn ref="SUPPORTED_CLIQZ_127"/>
       <enabledValue>
         <decimal value="1"/>
       </enabledValue>
@@ -165,26 +157,26 @@
       <parentCategory ref="Certificates" />
       <supportedOn ref="SUPPORTED_FF64" />
       <elements >
-        <list id="Certificates_Install" key="Software\Policies\Mozilla\Firefox\Certificates\Install" valuePrefix=""/>
+        <list id="Certificates_Install" key="Software\Policies\Cliqz\Certificates\Install" valuePrefix=""/>
       </elements>
     </policy>
-    <policy name="Cookies_Allow" class="Both" displayName="$(string.Allow)" explainText="$(string.Cookies_Allow_Explain)" key="Software\Policies\Mozilla\Firefox" presentation="$(presentation.Permissions)">
+    <policy name="Cookies_Allow" class="Both" displayName="$(string.Allow)" explainText="$(string.Cookies_Allow_Explain)" key="Software\Policies\Cliqz" presentation="$(presentation.Permissions)">
       <parentCategory ref="Cookies"/>
-      <supportedOn ref="SUPPORTED_FF60"/>
+      <supportedOn ref="SUPPORTED_CLIQZ_127"/>
       <elements>
-        <list id="Permissions" key="Software\Policies\Mozilla\Firefox\Cookies\Allow" valuePrefix=""/>
+        <list id="Permissions" key="Software\Policies\Cliqz\Cookies\Allow" valuePrefix=""/>
       </elements>
     </policy>
-    <policy name="Cookies_Block" class="Both" displayName="$(string.Block)" explainText="$(string.Cookies_Block_Explain)" key="Software\Policies\Mozilla\Firefox" presentation="$(presentation.Permissions)">
+    <policy name="Cookies_Block" class="Both" displayName="$(string.Block)" explainText="$(string.Cookies_Block_Explain)" key="Software\Policies\Cliqz" presentation="$(presentation.Permissions)">
       <parentCategory ref="Cookies"/>
-      <supportedOn ref="SUPPORTED_FF60"/>
+      <supportedOn ref="SUPPORTED_CLIQZ_127"/>
       <elements>
-        <list id="Permissions" key="Software\Policies\Mozilla\Firefox\Cookies\Block" valuePrefix=""/>
+        <list id="Permissions" key="Software\Policies\Cliqz\Cookies\Block" valuePrefix=""/>
       </elements>
     </policy>
-    <policy name="Cookies_Default" class="Both" displayName="$(string.Cookies_Default)" explainText="$(string.Cookies_Default_Explain)" key="Software\Policies\Mozilla\Firefox\Cookies" valueName="Default">
+    <policy name="Cookies_Default" class="Both" displayName="$(string.Cookies_Default)" explainText="$(string.Cookies_Default_Explain)" key="Software\Policies\Cliqz\Cookies" valueName="Default">
       <parentCategory ref="Cookies"/>
-      <supportedOn ref="SUPPORTED_FF60"/>
+      <supportedOn ref="SUPPORTED_CLIQZ_127"/>
       <enabledValue>
         <decimal value="1"/>
       </enabledValue>
@@ -192,9 +184,9 @@
         <decimal value="0"/>
       </disabledValue>
     </policy>
-    <policy name="Cookies_AcceptThirdParty" class="Both" displayName="$(string.Cookies_AcceptThirdParty)" explainText="$(string.Cookies_AcceptThirdParty_Explain)" key="Software\Policies\Mozilla\Firefox\Cookies"  presentation="$(presentation.Cookies_AcceptThirdParty)">
+    <policy name="Cookies_AcceptThirdParty" class="Both" displayName="$(string.Cookies_AcceptThirdParty)" explainText="$(string.Cookies_AcceptThirdParty_Explain)" key="Software\Policies\Cliqz\Cookies"  presentation="$(presentation.Cookies_AcceptThirdParty)">
       <parentCategory ref="Cookies"/>
-      <supportedOn ref="SUPPORTED_FF60"/>
+      <supportedOn ref="SUPPORTED_CLIQZ_127"/>
       <elements>
         <enum id="Cookies_AcceptThirdParty" valueName="AcceptThirdParty">
           <item displayName="$(string.Cookies_AcceptThirdParty_All)">
@@ -215,9 +207,9 @@
         </enum>
       </elements>
     </policy>
-    <policy name="Cookies_ExpireAtSessionEnd" class="Both" displayName="$(string.Cookies_ExpireAtSessionEnd)" explainText="$(string.Cookies_ExpireAtSessionEnd_Explain)" key="Software\Policies\Mozilla\Firefox\Cookies" valueName="ExpireAtSessionEnd">
+    <policy name="Cookies_ExpireAtSessionEnd" class="Both" displayName="$(string.Cookies_ExpireAtSessionEnd)" explainText="$(string.Cookies_ExpireAtSessionEnd_Explain)" key="Software\Policies\Cliqz\Cookies" valueName="ExpireAtSessionEnd">
       <parentCategory ref="Cookies"/>
-      <supportedOn ref="SUPPORTED_FF60"/>
+      <supportedOn ref="SUPPORTED_CLIQZ_127"/>
       <enabledValue>
         <decimal value="1"/>
       </enabledValue>
@@ -225,7 +217,7 @@
         <decimal value="0"/>
       </disabledValue>
     </policy>
-    <policy name="Cookies_RejectTracker" class="Both" displayName="$(string.Cookies_RejectTracker)" explainText="$(string.Cookies_RejectTracker_Explain)" key="Software\Policies\Mozilla\Firefox\Cookies" valueName="RejectTracker">
+    <policy name="Cookies_RejectTracker" class="Both" displayName="$(string.Cookies_RejectTracker)" explainText="$(string.Cookies_RejectTracker_Explain)" key="Software\Policies\Cliqz\Cookies" valueName="RejectTracker">
       <parentCategory ref="Cookies"/>
       <supportedOn ref="SUPPORTED_FF64"/>
       <enabledValue>
@@ -235,9 +227,9 @@
         <decimal value="0"/>
       </disabledValue>
     </policy>
-    <policy name="Cookies_Locked" class="Both" displayName="$(string.Cookies_Locked)" explainText="$(string.Cookies_Locked_Explain)" key="Software\Policies\Mozilla\Firefox\Cookies" valueName="Locked">
+    <policy name="Cookies_Locked" class="Both" displayName="$(string.Cookies_Locked)" explainText="$(string.Cookies_Locked_Explain)" key="Software\Policies\Cliqz\Cookies" valueName="Locked">
       <parentCategory ref="Cookies"/>
-      <supportedOn ref="SUPPORTED_FF60"/>
+      <supportedOn ref="SUPPORTED_CLIQZ_127"/>
       <enabledValue>
         <decimal value="1"/>
       </enabledValue>
@@ -245,31 +237,21 @@
         <decimal value="0"/>
       </disabledValue>
     </policy>
-    <policy name="Camera_Allow" class="Both" displayName="$(string.Allow)" explainText="$(string.Camera_Allow_Explain)" key="Software\Policies\Mozilla\Firefox\Permissions" presentation="$(presentation.Permissions)">
+    <policy name="Camera_Allow" class="Both" displayName="$(string.Allow)" explainText="$(string.Camera_Allow_Explain)" key="Software\Policies\Cliqz\Permissions" presentation="$(presentation.Permissions)">
       <parentCategory ref="Camera"/>
       <supportedOn ref="SUPPORTED_FF62"/>
       <elements>
-        <list id="Permissions" key="Software\Policies\Mozilla\Firefox\Permissions\Camera\Allow" valuePrefix=""/>
+        <list id="Permissions" key="Software\Policies\Cliqz\Permissions\Camera\Allow" valuePrefix=""/>
       </elements>
     </policy>
-    <policy name="Camera_Block" class="Both" displayName="$(string.Block)" explainText="$(string.Camera_Block_Explain)" key="Software\Policies\Mozilla\Firefox\Permissions" presentation="$(presentation.Permissions)">
+    <policy name="Camera_Block" class="Both" displayName="$(string.Block)" explainText="$(string.Camera_Block_Explain)" key="Software\Policies\Cliqz\Permissions" presentation="$(presentation.Permissions)">
       <parentCategory ref="Camera"/>
       <supportedOn ref="SUPPORTED_FF62"/>
       <elements>
-        <list id="Permissions" key="Software\Policies\Mozilla\Firefox\Camera\Permissions\Block" valuePrefix=""/>
+        <list id="Permissions" key="Software\Policies\Cliqz\Camera\Permissions\Block" valuePrefix=""/>
       </elements>
     </policy>
-    <policy name="Camera_BlockNewRequests" class="Both" displayName="$(string.Camera_BlockNewRequests)" explainText="$(string.Camera_BlockNewRequests_Explain)" key="Software\Policies\Mozilla\Firefox\Permissions\Camera" valueName="BlockNewRequests">
-      <parentCategory ref="Camera"/>
-      <supportedOn ref="SUPPORTED_FF62"/>
-      <enabledValue>
-        <decimal value="1"/>
-      </enabledValue>
-      <disabledValue>
-        <decimal value="0"/>
-      </disabledValue>
-    </policy>
-    <policy name="Camera_Locked" class="Both" displayName="$(string.Camera_Locked)" explainText="$(string.Camera_Locked_Explain)" key="Software\Policies\Mozilla\Firefox\Permissions\Camera" valueName="Locked">
+    <policy name="Camera_BlockNewRequests" class="Both" displayName="$(string.Camera_BlockNewRequests)" explainText="$(string.Camera_BlockNewRequests_Explain)" key="Software\Policies\Cliqz\Permissions\Camera" valueName="BlockNewRequests">
       <parentCategory ref="Camera"/>
       <supportedOn ref="SUPPORTED_FF62"/>
       <enabledValue>
@@ -279,31 +261,31 @@
         <decimal value="0"/>
       </disabledValue>
     </policy>
-    <policy name="Microphone_Allow" class="Both" displayName="$(string.Allow)" explainText="$(string.Microphone_Allow_Explain)" key="Software\Policies\Mozilla\Firefox\Permissions" presentation="$(presentation.Permissions)">
+    <policy name="Camera_Locked" class="Both" displayName="$(string.Camera_Locked)" explainText="$(string.Camera_Locked_Explain)" key="Software\Policies\Cliqz\Permissions\Camera" valueName="Locked">
+      <parentCategory ref="Camera"/>
+      <supportedOn ref="SUPPORTED_FF62"/>
+      <enabledValue>
+        <decimal value="1"/>
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0"/>
+      </disabledValue>
+    </policy>
+    <policy name="Microphone_Allow" class="Both" displayName="$(string.Allow)" explainText="$(string.Microphone_Allow_Explain)" key="Software\Policies\Cliqz\Permissions" presentation="$(presentation.Permissions)">
       <parentCategory ref="Microphone"/>
       <supportedOn ref="SUPPORTED_FF62"/>
       <elements>
-        <list id="Permissions" key="Software\Policies\Mozilla\Firefox\Permissions\Microphone\Allow" valuePrefix=""/>
+        <list id="Permissions" key="Software\Policies\Cliqz\Permissions\Microphone\Allow" valuePrefix=""/>
       </elements>
     </policy>
-    <policy name="Microphone_Block" class="Both" displayName="$(string.Block)" explainText="$(string.Microphone_Block_Explain)" key="Software\Policies\Mozilla\Firefox\Permissions" presentation="$(presentation.Permissions)">
+    <policy name="Microphone_Block" class="Both" displayName="$(string.Block)" explainText="$(string.Microphone_Block_Explain)" key="Software\Policies\Cliqz\Permissions" presentation="$(presentation.Permissions)">
       <parentCategory ref="Microphone"/>
       <supportedOn ref="SUPPORTED_FF62"/>
       <elements>
-        <list id="Permissions" key="Software\Policies\Mozilla\Firefox\Permissions\Microphone\Block" valuePrefix=""/>
+        <list id="Permissions" key="Software\Policies\Cliqz\Permissions\Microphone\Block" valuePrefix=""/>
       </elements>
     </policy>
-    <policy name="Microphone_BlockNewRequests" class="Both" displayName="$(string.Microphone_BlockNewRequests)" explainText="$(string.Microphone_BlockNewRequests_Explain)" key="Software\Policies\Mozilla\Firefox\Permissions\Microphone" valueName="BlockNewRequests">
-      <parentCategory ref="Microphone"/>
-      <supportedOn ref="SUPPORTED_FF62"/>
-      <enabledValue>
-        <decimal value="1"/>
-      </enabledValue>
-      <disabledValue>
-        <decimal value="0"/>
-      </disabledValue>
-    </policy>
-    <policy name="Microphone_Locked" class="Both" displayName="$(string.Microphone_Locked)" explainText="$(string.Microphone_Locked_Explain)" key="Software\Policies\Mozilla\Firefox\Permissions\Microphone" valueName="Locked">
+    <policy name="Microphone_BlockNewRequests" class="Both" displayName="$(string.Microphone_BlockNewRequests)" explainText="$(string.Microphone_BlockNewRequests_Explain)" key="Software\Policies\Cliqz\Permissions\Microphone" valueName="BlockNewRequests">
       <parentCategory ref="Microphone"/>
       <supportedOn ref="SUPPORTED_FF62"/>
       <enabledValue>
@@ -313,21 +295,31 @@
         <decimal value="0"/>
       </disabledValue>
     </policy>
-    <policy name="Location_Allow" class="Both" displayName="$(string.Allow)" explainText="$(string.Location_Allow_Explain)" key="Software\Policies\Mozilla\Firefox\Permissions" presentation="$(presentation.Permissions)">
+    <policy name="Microphone_Locked" class="Both" displayName="$(string.Microphone_Locked)" explainText="$(string.Microphone_Locked_Explain)" key="Software\Policies\Cliqz\Permissions\Microphone" valueName="Locked">
+      <parentCategory ref="Microphone"/>
+      <supportedOn ref="SUPPORTED_FF62"/>
+      <enabledValue>
+        <decimal value="1"/>
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0"/>
+      </disabledValue>
+    </policy>
+    <policy name="Location_Allow" class="Both" displayName="$(string.Allow)" explainText="$(string.Location_Allow_Explain)" key="Software\Policies\Cliqz\Permissions" presentation="$(presentation.Permissions)">
       <parentCategory ref="Location"/>
       <supportedOn ref="SUPPORTED_FF62"/>
       <elements>
-        <list id="Permissions" key="Software\Policies\Mozilla\Firefox\Permissions\Location\Allow" valuePrefix=""/>
+        <list id="Permissions" key="Software\Policies\Cliqz\Permissions\Location\Allow" valuePrefix=""/>
       </elements>
     </policy>
-    <policy name="Location_Block" class="Both" displayName="$(string.Block)" explainText="$(string.Location_Block_Explain)" key="Software\Policies\Mozilla\Firefox\Permissions" presentation="$(presentation.Permissions)">
+    <policy name="Location_Block" class="Both" displayName="$(string.Block)" explainText="$(string.Location_Block_Explain)" key="Software\Policies\Cliqz\Permissions" presentation="$(presentation.Permissions)">
       <parentCategory ref="Location"/>
       <supportedOn ref="SUPPORTED_FF62"/>
       <elements>
-        <list id="Permissions" key="Software\Policies\Mozilla\Firefox\Permissions\Location\Block" valuePrefix=""/>
+        <list id="Permissions" key="Software\Policies\Cliqz\Permissions\Location\Block" valuePrefix=""/>
       </elements>
     </policy>
-    <policy name="Location_BlockNewRequests" class="Both" displayName="$(string.Location_BlockNewRequests)" explainText="$(string.Location_BlockNewRequests_Explain)" key="Software\Policies\Mozilla\Firefox\Permissions\Location" valueName="BlockNewRequests">
+    <policy name="Location_BlockNewRequests" class="Both" displayName="$(string.Location_BlockNewRequests)" explainText="$(string.Location_BlockNewRequests_Explain)" key="Software\Policies\Cliqz\Permissions\Location" valueName="BlockNewRequests">
       <parentCategory ref="Location"/>
       <supportedOn ref="SUPPORTED_FF62"/>
       <enabledValue>
@@ -337,7 +329,7 @@
         <decimal value="0"/>
       </disabledValue>
     </policy>
-    <policy name="Location_Locked" class="Both" displayName="$(string.Location_Locked)" explainText="$(string.Location_Locked_Explain)" key="Software\Policies\Mozilla\Firefox\Permissions\Location" valueName="Locked">
+    <policy name="Location_Locked" class="Both" displayName="$(string.Location_Locked)" explainText="$(string.Location_Locked_Explain)" key="Software\Policies\Cliqz\Permissions\Location" valueName="Locked">
       <parentCategory ref="Location"/>
       <supportedOn ref="SUPPORTED_FF62"/>
       <enabledValue>
@@ -347,21 +339,21 @@
         <decimal value="0"/>
       </disabledValue>
     </policy>
-    <policy name="Notifications_Allow" class="Both" displayName="$(string.Allow)" explainText="$(string.Notifications_Allow_Explain)" key="Software\Policies\Mozilla\Firefox\Permissions" presentation="$(presentation.Permissions)">
+    <policy name="Notifications_Allow" class="Both" displayName="$(string.Allow)" explainText="$(string.Notifications_Allow_Explain)" key="Software\Policies\Cliqz\Permissions" presentation="$(presentation.Permissions)">
       <parentCategory ref="Notifications"/>
       <supportedOn ref="SUPPORTED_FF62"/>
       <elements>
-        <list id="Permissions" key="Software\Policies\Mozilla\Firefox\Permissions\Notifications\Allow" valuePrefix=""/>
+        <list id="Permissions" key="Software\Policies\Cliqz\Permissions\Notifications\Allow" valuePrefix=""/>
       </elements>
     </policy>
-    <policy name="Notifications_Block" class="Both" displayName="$(string.Block)" explainText="$(string.Notifications_Block_Explain)" key="Software\Policies\Mozilla\Firefox\Permissions" presentation="$(presentation.Permissions)">
+    <policy name="Notifications_Block" class="Both" displayName="$(string.Block)" explainText="$(string.Notifications_Block_Explain)" key="Software\Policies\Cliqz\Permissions" presentation="$(presentation.Permissions)">
       <parentCategory ref="Notifications"/>
       <supportedOn ref="SUPPORTED_FF62"/>
       <elements>
-        <list id="Permissions" key="Software\Policies\Mozilla\Firefox\Permissions\Notifications\Block" valuePrefix=""/>
+        <list id="Permissions" key="Software\Policies\Cliqz\Permissions\Notifications\Block" valuePrefix=""/>
       </elements>
     </policy>
-    <policy name="Notifications_BlockNewRequests" class="Both" displayName="$(string.Notifications_BlockNewRequests)" explainText="$(string.Notifications_BlockNewRequests_Explain)" key="Software\Policies\Mozilla\Firefox\Permissions\Notifications" valueName="BlockNewRequests">
+    <policy name="Notifications_BlockNewRequests" class="Both" displayName="$(string.Notifications_BlockNewRequests)" explainText="$(string.Notifications_BlockNewRequests_Explain)" key="Software\Policies\Cliqz\Permissions\Notifications" valueName="BlockNewRequests">
       <parentCategory ref="Notifications"/>
       <supportedOn ref="SUPPORTED_FF62"/>
       <enabledValue>
@@ -371,7 +363,7 @@
         <decimal value="0"/>
       </disabledValue>
     </policy>
-    <policy name="Notifications_Locked" class="Both" displayName="$(string.Notifications_Locked)" explainText="$(string.Notifications_Locked_Explain)" key="Software\Policies\Mozilla\Firefox\Permissions\Notifications" valueName="Locked">
+    <policy name="Notifications_Locked" class="Both" displayName="$(string.Notifications_Locked)" explainText="$(string.Notifications_Locked_Explain)" key="Software\Policies\Cliqz\Permissions\Notifications" valueName="Locked">
       <parentCategory ref="Notifications"/>
       <supportedOn ref="SUPPORTED_FF62"/>
       <enabledValue>
@@ -381,12 +373,12 @@
         <decimal value="0"/>
       </disabledValue>
     </policy>
-    <policy name="DNSOverHTTPS" class="Both" displayName="$(string.DNSOverHTTPS)" explainText="$(string.DNSOverHTTPS_Explain)" key="Software\Policies\Mozilla\Firefox\DNSOverHTTPS" presentation="$(presentation.DNSOverHTTPS)" >
-      <parentCategory ref="firefox" />
+    <policy name="DNSOverHTTPS" class="Both" displayName="$(string.DNSOverHTTPS)" explainText="$(string.DNSOverHTTPS_Explain)" key="Software\Policies\Cliqz\DNSOverHTTPS" presentation="$(presentation.DNSOverHTTPS)" >
+      <parentCategory ref="cliqz" />
       <supportedOn ref="SUPPORTED_FF63ESR" />
       <elements >
         <text id="ProviderURL" valueName="ProviderURL" />
-        <boolean id="DNSOverHTTPSEnabled" key="Software\Policies\Mozilla\Firefox\DNSOverHTTPS" valueName="Enabled">
+        <boolean id="DNSOverHTTPSEnabled" key="Software\Policies\Cliqz\DNSOverHTTPS" valueName="Enabled">
           <trueValue>
             <decimal value="1"/>
           </trueValue>
@@ -394,7 +386,7 @@
             <decimal value="0"/>
           </falseValue>
         </boolean>
-        <boolean id="DNSOverHTTPSLocked" key="Software\Policies\Mozilla\Firefox\DNSOverHTTPS" valueName="Locked">
+        <boolean id="DNSOverHTTPSLocked" key="Software\Policies\Cliqz\DNSOverHTTPS" valueName="Locked">
           <trueValue>
             <decimal value="1"/>
           </trueValue>
@@ -404,9 +396,9 @@
         </boolean>
       </elements>
     </policy>
-    <policy name="DisableAppUpdate" class="Both" displayName="$(string.DisableAppUpdate)" explainText="$(string.DisableAppUpdate_Explain)" key="Software\Policies\Mozilla\Firefox" valueName="DisableAppUpdate">
-      <parentCategory ref="firefox"/>
-      <supportedOn ref="SUPPORTED_FF60"/>
+    <policy name="DisableAppUpdate" class="Both" displayName="$(string.DisableAppUpdate)" explainText="$(string.DisableAppUpdate_Explain)" key="Software\Policies\Cliqz" valueName="DisableAppUpdate">
+      <parentCategory ref="cliqz"/>
+      <supportedOn ref="SUPPORTED_CLIQZ_127"/>
       <enabledValue>
         <decimal value="1"/>
       </enabledValue>
@@ -414,9 +406,9 @@
         <decimal value="0"/>
       </disabledValue>
     </policy>
-    <policy name="DisableBuiltinPDFViewer" class="Both" displayName="$(string.DisableBuiltinPDFViewer)" explainText="$(string.DisableBuiltinPDFViewer_Explain)" key="Software\Policies\Mozilla\Firefox" valueName="DisableBuiltinPDFViewer">
-      <parentCategory ref="firefox"/>
-      <supportedOn ref="SUPPORTED_FF60"/>
+    <policy name="DisableBuiltinPDFViewer" class="Both" displayName="$(string.DisableBuiltinPDFViewer)" explainText="$(string.DisableBuiltinPDFViewer_Explain)" key="Software\Policies\Cliqz" valueName="DisableBuiltinPDFViewer">
+      <parentCategory ref="cliqz"/>
+      <supportedOn ref="SUPPORTED_CLIQZ_127"/>
       <enabledValue>
         <decimal value="1"/>
       </enabledValue>
@@ -424,9 +416,9 @@
         <decimal value="0"/>
       </disabledValue>
     </policy>
-    <policy name="DisableDeveloperTools" class="Both" displayName="$(string.DisableDeveloperTools)" explainText="$(string.DisableDeveloperTools_Explain)" key="Software\Policies\Mozilla\Firefox" valueName="DisableDeveloperTools">
-      <parentCategory ref="firefox"/>
-      <supportedOn ref="SUPPORTED_FF60"/>
+    <policy name="DisableDeveloperTools" class="Both" displayName="$(string.DisableDeveloperTools)" explainText="$(string.DisableDeveloperTools_Explain)" key="Software\Policies\Cliqz" valueName="DisableDeveloperTools">
+      <parentCategory ref="cliqz"/>
+      <supportedOn ref="SUPPORTED_CLIQZ_127"/>
       <enabledValue>
         <decimal value="1"/>
       </enabledValue>
@@ -434,9 +426,9 @@
         <decimal value="0"/>
       </disabledValue>
     </policy>
-    <policy name="DisableFeedbackCommands" class="Both" displayName="$(string.DisableFeedbackCommands)" explainText="$(string.DisableFeedbackCommands_Explain)" key="Software\Policies\Mozilla\Firefox" valueName="DisableFeedbackCommands">
-      <parentCategory ref="firefox"/>
-      <supportedOn ref="SUPPORTED_FF60"/>
+    <policy name="DisableFeedbackCommands" class="Both" displayName="$(string.DisableFeedbackCommands)" explainText="$(string.DisableFeedbackCommands_Explain)" key="Software\Policies\Cliqz" valueName="DisableFeedbackCommands">
+      <parentCategory ref="cliqz"/>
+      <supportedOn ref="SUPPORTED_CLIQZ_127"/>
       <enabledValue>
         <decimal value="1"/>
       </enabledValue>
@@ -444,9 +436,9 @@
         <decimal value="0"/>
       </disabledValue>
     </policy>
-    <policy name="DisableFirefoxAccounts" class="Both" displayName="$(string.DisableFirefoxAccounts)" explainText="$(string.DisableFirefoxAccounts_Explain)" key="Software\Policies\Mozilla\Firefox" valueName="DisableFirefoxAccounts">
-      <parentCategory ref="firefox"/>
-      <supportedOn ref="SUPPORTED_FF60"/>
+    <policy name="DisableForgetButton" class="Both" displayName="$(string.DisableForgetButton)" explainText="$(string.DisableForgetButton_Explain)" key="Software\Policies\Cliqz" valueName="DisableForgetButton">
+      <parentCategory ref="cliqz"/>
+      <supportedOn ref="SUPPORTED_CLIQZ_127"/>
       <enabledValue>
         <decimal value="1"/>
       </enabledValue>
@@ -454,9 +446,9 @@
         <decimal value="0"/>
       </disabledValue>
     </policy>
-    <policy name="DisableFirefoxScreenshots" class="Both" displayName="$(string.DisableFirefoxScreenshots)" explainText="$(string.DisableFirefoxScreenshots_Explain)" key="Software\Policies\Mozilla\Firefox" valueName="DisableFirefoxScreenshots">
-      <parentCategory ref="firefox"/>
-      <supportedOn ref="SUPPORTED_FF60"/>
+    <policy name="DisableFormHistory" class="Both" displayName="$(string.DisableFormHistory)" explainText="$(string.DisableFormHistory_Explain)" key="Software\Policies\Cliqz" valueName="DisableFormHistory">
+      <parentCategory ref="cliqz"/>
+      <supportedOn ref="SUPPORTED_CLIQZ_127"/>
       <enabledValue>
         <decimal value="1"/>
       </enabledValue>
@@ -464,38 +456,8 @@
         <decimal value="0"/>
       </disabledValue>
     </policy>
-    <policy name="DisableFirefoxStudies" class="Both" displayName="$(string.DisableFirefoxStudies)" explainText="$(string.DisableFirefoxStudies_Explain)" key="Software\Policies\Mozilla\Firefox" valueName="DisableFirefoxStudies">
-      <parentCategory ref="firefox"/>
-      <supportedOn ref="SUPPORTED_FF60"/>
-      <enabledValue>
-        <decimal value="1"/>
-      </enabledValue>
-      <disabledValue>
-        <decimal value="0"/>
-      </disabledValue>
-    </policy>
-    <policy name="DisableForgetButton" class="Both" displayName="$(string.DisableForgetButton)" explainText="$(string.DisableForgetButton_Explain)" key="Software\Policies\Mozilla\Firefox" valueName="DisableForgetButton">
-      <parentCategory ref="firefox"/>
-      <supportedOn ref="SUPPORTED_FF60"/>
-      <enabledValue>
-        <decimal value="1"/>
-      </enabledValue>
-      <disabledValue>
-        <decimal value="0"/>
-      </disabledValue>
-    </policy>
-    <policy name="DisableFormHistory" class="Both" displayName="$(string.DisableFormHistory)" explainText="$(string.DisableFormHistory_Explain)" key="Software\Policies\Mozilla\Firefox" valueName="DisableFormHistory">
-      <parentCategory ref="firefox"/>
-      <supportedOn ref="SUPPORTED_FF60"/>
-      <enabledValue>
-        <decimal value="1"/>
-      </enabledValue>
-      <disabledValue>
-        <decimal value="0"/>
-      </disabledValue>
-    </policy>
-    <policy name="HardwareAcceleration" class="Both" displayName="$(string.HardwareAcceleration)" explainText="$(string.HardwareAcceleration_Explain)" key="Software\Policies\Mozilla\Firefox" valueName="HardwareAcceleration">
-      <parentCategory ref="firefox"/>
+    <policy name="HardwareAcceleration" class="Both" displayName="$(string.HardwareAcceleration)" explainText="$(string.HardwareAcceleration_Explain)" key="Software\Policies\Cliqz" valueName="HardwareAcceleration">
+      <parentCategory ref="cliqz"/>
       <supportedOn ref="SUPPORTED_FF62"/>
       <enabledValue>
         <decimal value="1"/>
@@ -504,9 +466,9 @@
         <decimal value="0"/>
       </disabledValue>
     </policy>
-    <policy name="DisableMasterPasswordCreation" class="Both" displayName="$(string.DisableMasterPasswordCreation)" explainText="$(string.DisableMasterPasswordCreation_Explain)" key="Software\Policies\Mozilla\Firefox" valueName="DisableMasterPasswordCreation">
-      <parentCategory ref="firefox"/>
-      <supportedOn ref="SUPPORTED_FF60"/>
+    <policy name="DisableMasterPasswordCreation" class="Both" displayName="$(string.DisableMasterPasswordCreation)" explainText="$(string.DisableMasterPasswordCreation_Explain)" key="Software\Policies\Cliqz" valueName="DisableMasterPasswordCreation">
+      <parentCategory ref="cliqz"/>
+      <supportedOn ref="SUPPORTED_CLIQZ_127"/>
       <enabledValue>
         <decimal value="1"/>
       </enabledValue>
@@ -514,9 +476,9 @@
         <decimal value="0"/>
       </disabledValue>
     </policy>
-    <policy name="DisablePocket" class="Both" displayName="$(string.DisablePocket)" explainText="$(string.DisablePocket_Explain)" key="Software\Policies\Mozilla\Firefox" valueName="DisablePocket">
-      <parentCategory ref="firefox"/>
-      <supportedOn ref="SUPPORTED_FF60"/>
+    <policy name="DisablePrivateBrowsing" class="Both" displayName="$(string.DisablePrivateBrowsing)" explainText="$(string.DisablePrivateBrowsing_Explain)" key="Software\Policies\Cliqz" valueName="DisablePrivateBrowsing">
+      <parentCategory ref="cliqz"/>
+      <supportedOn ref="SUPPORTED_CLIQZ_127"/>
       <enabledValue>
         <decimal value="1"/>
       </enabledValue>
@@ -524,9 +486,9 @@
         <decimal value="0"/>
       </disabledValue>
     </policy>
-    <policy name="DisablePrivateBrowsing" class="Both" displayName="$(string.DisablePrivateBrowsing)" explainText="$(string.DisablePrivateBrowsing_Explain)" key="Software\Policies\Mozilla\Firefox" valueName="DisablePrivateBrowsing">
-      <parentCategory ref="firefox"/>
-      <supportedOn ref="SUPPORTED_FF60"/>
+    <policy name="DisableProfileImport" class="Both" displayName="$(string.DisableProfileImport)" explainText="$(string.DisableProfileImport_Explain)" key="Software\Policies\Cliqz" valueName="DisableProfileImport">
+      <parentCategory ref="cliqz"/>
+      <supportedOn ref="SUPPORTED_CLIQZ_127"/>
       <enabledValue>
         <decimal value="1"/>
       </enabledValue>
@@ -534,9 +496,9 @@
         <decimal value="0"/>
       </disabledValue>
     </policy>
-    <policy name="DisableProfileImport" class="Both" displayName="$(string.DisableProfileImport)" explainText="$(string.DisableProfileImport_Explain)" key="Software\Policies\Mozilla\Firefox" valueName="DisableProfileImport">
-      <parentCategory ref="firefox"/>
-      <supportedOn ref="SUPPORTED_FF60"/>
+    <policy name="DisableProfileRefresh" class="Both" displayName="$(string.DisableProfileRefresh)" explainText="$(string.DisableProfileRefresh_Explain)" key="Software\Policies\Cliqz" valueName="DisableProfileRefresh">
+      <parentCategory ref="cliqz"/>
+      <supportedOn ref="SUPPORTED_CLIQZ_127"/>
       <enabledValue>
         <decimal value="1"/>
       </enabledValue>
@@ -544,9 +506,9 @@
         <decimal value="0"/>
       </disabledValue>
     </policy>
-    <policy name="DisableProfileRefresh" class="Both" displayName="$(string.DisableProfileRefresh)" explainText="$(string.DisableProfileRefresh_Explain)" key="Software\Policies\Mozilla\Firefox" valueName="DisableProfileRefresh">
-      <parentCategory ref="firefox"/>
-      <supportedOn ref="SUPPORTED_FF60"/>
+    <policy name="DisableSafeMode" class="Both" displayName="$(string.DisableSafeMode)" explainText="$(string.DisableSafeMode_Explain)" key="Software\Policies\Cliqz" valueName="DisableSafeMode">
+      <parentCategory ref="cliqz"/>
+      <supportedOn ref="SUPPORTED_CLIQZ_127"/>
       <enabledValue>
         <decimal value="1"/>
       </enabledValue>
@@ -554,9 +516,9 @@
         <decimal value="0"/>
       </disabledValue>
     </policy>
-    <policy name="DisableSafeMode" class="Both" displayName="$(string.DisableSafeMode)" explainText="$(string.DisableSafeMode_Explain)" key="Software\Policies\Mozilla\Firefox" valueName="DisableSafeMode">
-      <parentCategory ref="firefox"/>
-      <supportedOn ref="SUPPORTED_FF60"/>
+    <policy name="DisableSetDesktopBackground" class="Both" displayName="$(string.DisableSetDesktopBackground)" explainText="$(string.DisableSetDesktopBackground_Explain)" key="Software\Policies\Cliqz" valueName="DisableSetDesktopBackground">
+      <parentCategory ref="cliqz"/>
+      <supportedOn ref="SUPPORTED_CLIQZ_127"/>
       <enabledValue>
         <decimal value="1"/>
       </enabledValue>
@@ -564,9 +526,9 @@
         <decimal value="0"/>
       </disabledValue>
     </policy>
-    <policy name="DisableSetDesktopBackground" class="Both" displayName="$(string.DisableSetDesktopBackground)" explainText="$(string.DisableSetDesktopBackground_Explain)" key="Software\Policies\Mozilla\Firefox" valueName="DisableSetDesktopBackground">
-      <parentCategory ref="firefox"/>
-      <supportedOn ref="SUPPORTED_FF60"/>
+    <policy name="DisableSystemAddonUpdate" class="Both" displayName="$(string.DisableSystemAddonUpdate)" explainText="$(string.DisableSystemAddonUpdate_Explain)" key="Software\Policies\Cliqz" valueName="DisableSystemAddonUpdate">
+      <parentCategory ref="cliqz"/>
+      <supportedOn ref="SUPPORTED_CLIQZ_127"/>
       <enabledValue>
         <decimal value="1"/>
       </enabledValue>
@@ -574,9 +536,9 @@
         <decimal value="0"/>
       </disabledValue>
     </policy>
-    <policy name="DisableSystemAddonUpdate" class="Both" displayName="$(string.DisableSystemAddonUpdate)" explainText="$(string.DisableSystemAddonUpdate_Explain)" key="Software\Policies\Mozilla\Firefox" valueName="DisableSystemAddonUpdate">
-      <parentCategory ref="firefox"/>
-      <supportedOn ref="SUPPORTED_FF60"/>
+    <policy name="DisableTelemetry" class="Both" displayName="$(string.DisableTelemetry)" explainText="$(string.DisableTelemetry_Explain)" key="Software\Policies\Cliqz" valueName="DisableTelemetry">
+      <parentCategory ref="cliqz"/>
+      <supportedOn ref="SUPPORTED_CLIQZ_127"/>
       <enabledValue>
         <decimal value="1"/>
       </enabledValue>
@@ -584,9 +546,9 @@
         <decimal value="0"/>
       </disabledValue>
     </policy>
-    <policy name="DisableTelemetry" class="Both" displayName="$(string.DisableTelemetry)" explainText="$(string.DisableTelemetry_Explain)" key="Software\Policies\Mozilla\Firefox" valueName="DisableTelemetry">
-      <parentCategory ref="firefox"/>
-      <supportedOn ref="SUPPORTED_FF60"/>
+    <policy name="DisplayBookmarksToolbar" class="Both" displayName="$(string.DisplayBookmarksToolbar)" explainText="$(string.DisplayBookmarksToolbar_Explain)" key="Software\Policies\Cliqz" valueName="DisplayBookmarksToolbar">
+      <parentCategory ref="cliqz"/>
+      <supportedOn ref="SUPPORTED_CLIQZ_127"/>
       <enabledValue>
         <decimal value="1"/>
       </enabledValue>
@@ -594,9 +556,9 @@
         <decimal value="0"/>
       </disabledValue>
     </policy>
-    <policy name="DisplayBookmarksToolbar" class="Both" displayName="$(string.DisplayBookmarksToolbar)" explainText="$(string.DisplayBookmarksToolbar_Explain)" key="Software\Policies\Mozilla\Firefox" valueName="DisplayBookmarksToolbar">
-      <parentCategory ref="firefox"/>
-      <supportedOn ref="SUPPORTED_FF60"/>
+    <policy name="DisplayMenuBar" class="Both" displayName="$(string.DisplayMenuBar)" explainText="$(string.DisplayMenuBar_Explain)" key="Software\Policies\Cliqz" valueName="DisplayMenuBar">
+      <parentCategory ref="cliqz"/>
+      <supportedOn ref="SUPPORTED_CLIQZ_127"/>
       <enabledValue>
         <decimal value="1"/>
       </enabledValue>
@@ -604,40 +566,30 @@
         <decimal value="0"/>
       </disabledValue>
     </policy>
-    <policy name="DisplayMenuBar" class="Both" displayName="$(string.DisplayMenuBar)" explainText="$(string.DisplayMenuBar_Explain)" key="Software\Policies\Mozilla\Firefox" valueName="DisplayMenuBar">
-      <parentCategory ref="firefox"/>
-      <supportedOn ref="SUPPORTED_FF60"/>
-      <enabledValue>
-        <decimal value="1"/>
-      </enabledValue>
-      <disabledValue>
-        <decimal value="0"/>
-      </disabledValue>
-    </policy>
-    <policy name="Extensions_Install" class="Both" displayName="$(string.Extensions_Install)"  key="Software\Policies\Mozilla\Firefox\Extensions\Install" explainText="$(string.Extensions_Install_Explain)" presentation="$(presentation.Extensions)">
+    <policy name="Extensions_Install" class="Both" displayName="$(string.Extensions_Install)"  key="Software\Policies\Cliqz\Extensions\Install" explainText="$(string.Extensions_Install_Explain)" presentation="$(presentation.Extensions)">
       <parentCategory ref="Extensions"/>
-      <supportedOn ref="SUPPORTED_FF60"/>
+      <supportedOn ref="SUPPORTED_CLIQZ_127"/>
       <elements>
-        <list id="Extensions" key="Software\Policies\Mozilla\Firefox\Extensions\Install" valuePrefix=""/>
+        <list id="Extensions" key="Software\Policies\Cliqz\Extensions\Install" valuePrefix=""/>
       </elements>
     </policy>
-    <policy name="Extensions_Uninstall" class="Both" displayName="$(string.Extensions_Uninstall)"  key="Software\Policies\Mozilla\Firefox\Extensions\Uninstall" explainText="$(string.Extensions_Uninstall_Explain)" presentation="$(presentation.Extensions)">
+    <policy name="Extensions_Uninstall" class="Both" displayName="$(string.Extensions_Uninstall)"  key="Software\Policies\Cliqz\Extensions\Uninstall" explainText="$(string.Extensions_Uninstall_Explain)" presentation="$(presentation.Extensions)">
       <parentCategory ref="Extensions"/>
-      <supportedOn ref="SUPPORTED_FF60"/>
+      <supportedOn ref="SUPPORTED_CLIQZ_127"/>
       <elements>
-        <list id="Extensions" key="Software\Policies\Mozilla\Firefox\Extensions\Uninstall" valuePrefix=""/>
+        <list id="Extensions" key="Software\Policies\Cliqz\Extensions\Uninstall" valuePrefix=""/>
       </elements>
     </policy>
-    <policy name="Extensions_Locked" class="Both" displayName="$(string.Extensions_Locked)"  key="Software\Policies\Mozilla\Firefox\Extensions\Locked" explainText="$(string.Extensions_Locked_Explain)" presentation="$(presentation.Extensions)">
+    <policy name="Extensions_Locked" class="Both" displayName="$(string.Extensions_Locked)"  key="Software\Policies\Cliqz\Extensions\Locked" explainText="$(string.Extensions_Locked_Explain)" presentation="$(presentation.Extensions)">
       <parentCategory ref="Extensions"/>
-      <supportedOn ref="SUPPORTED_FF60"/>
+      <supportedOn ref="SUPPORTED_CLIQZ_127"/>
       <elements>
-        <list id="Extensions" key="Software\Policies\Mozilla\Firefox\Extensions\Locked" valuePrefix=""/>
+        <list id="Extensions" key="Software\Policies\Cliqz\Extensions\Locked" valuePrefix=""/>
       </elements>
     </policy>
-    <policy name="NoDefaultBookmarks" class="Both" displayName="$(string.NoDefaultBookmarks)" explainText="$(string.NoDefaultBookmarks_Explain)" key="Software\Policies\Mozilla\Firefox" valueName="NoDefaultBookmarks">
-      <parentCategory ref="firefox"/>
-      <supportedOn ref="SUPPORTED_FF60"/>
+    <policy name="NoDefaultBookmarks" class="Both" displayName="$(string.NoDefaultBookmarks)" explainText="$(string.NoDefaultBookmarks_Explain)" key="Software\Policies\Cliqz" valueName="NoDefaultBookmarks">
+      <parentCategory ref="cliqz"/>
+      <supportedOn ref="SUPPORTED_CLIQZ_127"/>
       <enabledValue>
         <decimal value="1"/>
       </enabledValue>
@@ -645,9 +597,9 @@
         <decimal value="0"/>
       </disabledValue>
     </policy>
-    <policy name="DontCheckDefaultBrowser" class="Both" displayName="$(string.DontCheckDefaultBrowser)" explainText="$(string.DontCheckDefaultBrowser_Explain)" key="Software\Policies\Mozilla\Firefox" valueName="DontCheckDefaultBrowser">
-      <parentCategory ref="firefox"/>
-      <supportedOn ref="SUPPORTED_FF60"/>
+    <policy name="DontCheckDefaultBrowser" class="Both" displayName="$(string.DontCheckDefaultBrowser)" explainText="$(string.DontCheckDefaultBrowser_Explain)" key="Software\Policies\Cliqz" valueName="DontCheckDefaultBrowser">
+      <parentCategory ref="cliqz"/>
+      <supportedOn ref="SUPPORTED_CLIQZ_127"/>
       <enabledValue>
         <decimal value="1"/>
       </enabledValue>
@@ -655,9 +607,9 @@
         <decimal value="0"/>
       </disabledValue>
     </policy>
-    <policy name="OfferToSaveLogins" class="Both" displayName="$(string.OfferToSaveLogins)" explainText="$(string.OfferToSaveLogins_Explain)" key="Software\Policies\Mozilla\Firefox" valueName="OfferToSaveLogins">
-      <parentCategory ref="firefox"/>
-      <supportedOn ref="SUPPORTED_FF60"/>
+    <policy name="OfferToSaveLogins" class="Both" displayName="$(string.OfferToSaveLogins)" explainText="$(string.OfferToSaveLogins_Explain)" key="Software\Policies\Cliqz" valueName="OfferToSaveLogins">
+      <parentCategory ref="cliqz"/>
+      <supportedOn ref="SUPPORTED_CLIQZ_127"/>
       <enabledValue>
         <decimal value="1"/>
       </enabledValue>
@@ -665,16 +617,16 @@
         <decimal value="0"/>
       </disabledValue>
     </policy>
-    <policy name="PopupBlocking_Allow" class="Both" displayName="$(string.Allow)" explainText="$(string.PopupBlocking_Allow_Explain)" key="Software\Policies\Mozilla\Firefox" presentation="$(presentation.Permissions)">
+    <policy name="PopupBlocking_Allow" class="Both" displayName="$(string.Allow)" explainText="$(string.PopupBlocking_Allow_Explain)" key="Software\Policies\Cliqz" presentation="$(presentation.Permissions)">
       <parentCategory ref="Popups"/>
-      <supportedOn ref="SUPPORTED_FF60"/>
+      <supportedOn ref="SUPPORTED_CLIQZ_127"/>
       <elements>
-        <list id="Permissions" key="Software\Policies\Mozilla\Firefox\PopupBlocking\Allow" valuePrefix=""/>
+        <list id="Permissions" key="Software\Policies\Cliqz\PopupBlocking\Allow" valuePrefix=""/>
       </elements>
     </policy>
-    <policy name="PopupBlocking_Default" class="Both" displayName="$(string.PopupBlocking_Default)" explainText="$(string.PopupBlocking_Default_Explain)" key="Software\Policies\Mozilla\Firefox\PopupBlocking" valueName="Default">
+    <policy name="PopupBlocking_Default" class="Both" displayName="$(string.PopupBlocking_Default)" explainText="$(string.PopupBlocking_Default_Explain)" key="Software\Policies\Cliqz\PopupBlocking" valueName="Default">
       <parentCategory ref="Popups"/>
-      <supportedOn ref="SUPPORTED_FF60"/>
+      <supportedOn ref="SUPPORTED_CLIQZ_127"/>
       <enabledValue>
         <decimal value="1"/>
       </enabledValue>
@@ -682,9 +634,9 @@
         <decimal value="0"/>
       </disabledValue>
     </policy>
-    <policy name="PopupBlocking_Locked" class="Both" displayName="$(string.PopupBlocking_Locked)" explainText="$(string.PopupBlocking_Locked_Explain)" key="Software\Policies\Mozilla\Firefox\PopupBlocking" valueName="Locked">
+    <policy name="PopupBlocking_Locked" class="Both" displayName="$(string.PopupBlocking_Locked)" explainText="$(string.PopupBlocking_Locked_Explain)" key="Software\Policies\Cliqz\PopupBlocking" valueName="Locked">
       <parentCategory ref="Popups"/>
-      <supportedOn ref="SUPPORTED_FF60"/>
+      <supportedOn ref="SUPPORTED_CLIQZ_127"/>
       <enabledValue>
         <decimal value="1"/>
       </enabledValue>
@@ -692,16 +644,16 @@
         <decimal value="0"/>
       </disabledValue>
     </policy>
-    <policy name="InstallAddonsPermission_Allow" class="Both" displayName="$(string.Allow)" explainText="$(string.InstallAddonsPermission_Allow_Explain)" key="Software\Policies\Mozilla\Firefox" presentation="$(presentation.Permissions)">
+    <policy name="InstallAddonsPermission_Allow" class="Both" displayName="$(string.Allow)" explainText="$(string.InstallAddonsPermission_Allow_Explain)" key="Software\Policies\Cliqz" presentation="$(presentation.Permissions)">
       <parentCategory ref="Addons"/>
-      <supportedOn ref="SUPPORTED_FF60"/>
+      <supportedOn ref="SUPPORTED_CLIQZ_127"/>
       <elements>
-        <list id="Permissions" key="Software\Policies\Mozilla\Firefox\InstallAddonsPermission\Allow" valuePrefix=""/>
+        <list id="Permissions" key="Software\Policies\Cliqz\InstallAddonsPermission\Allow" valuePrefix=""/>
       </elements>
     </policy>
-    <policy name="InstallAddonsPermission_Default" class="Both" displayName="$(string.InstallAddonsPermission_Default)" explainText="$(string.InstallAddonsPermission_Default_Explain)" key="Software\Policies\Mozilla\Firefox\InstallAddonsPermission" valueName="Default">
+    <policy name="InstallAddonsPermission_Default" class="Both" displayName="$(string.InstallAddonsPermission_Default)" explainText="$(string.InstallAddonsPermission_Default_Explain)" key="Software\Policies\Cliqz\InstallAddonsPermission" valueName="Default">
       <parentCategory ref="Addons"/>
-      <supportedOn ref="SUPPORTED_FF60"/>
+      <supportedOn ref="SUPPORTED_CLIQZ_127"/>
       <enabledValue>
         <decimal value="1"/>
       </enabledValue>
@@ -709,23 +661,23 @@
         <decimal value="0"/>
       </disabledValue>
     </policy>
-    <policy name="FlashPlugin_Allow" class="Both" displayName="$(string.Allow)" explainText="$(string.FlashPlugin_Allow_Explain)" key="Software\Policies\Mozilla\Firefox" presentation="$(presentation.Permissions)">
+    <policy name="FlashPlugin_Allow" class="Both" displayName="$(string.Allow)" explainText="$(string.FlashPlugin_Allow_Explain)" key="Software\Policies\Cliqz" presentation="$(presentation.Permissions)">
       <parentCategory ref="Flash"/>
-      <supportedOn ref="SUPPORTED_FF60"/>
+      <supportedOn ref="SUPPORTED_CLIQZ_127"/>
       <elements>
-        <list id="Permissions" key="Software\Policies\Mozilla\Firefox\FlashPlugin\Allow" valuePrefix=""/>
+        <list id="Permissions" key="Software\Policies\Cliqz\FlashPlugin\Allow" valuePrefix=""/>
       </elements>
     </policy>
-    <policy name="FlashPlugin_Block" class="Both" displayName="$(string.Block)" explainText="$(string.FlashPlugin_Block_Explain)" key="Software\Policies\Mozilla\Firefox" presentation="$(presentation.Permissions)">
+    <policy name="FlashPlugin_Block" class="Both" displayName="$(string.Block)" explainText="$(string.FlashPlugin_Block_Explain)" key="Software\Policies\Cliqz" presentation="$(presentation.Permissions)">
       <parentCategory ref="Flash"/>
-      <supportedOn ref="SUPPORTED_FF60"/>
+      <supportedOn ref="SUPPORTED_CLIQZ_127"/>
       <elements>
-        <list id="Permissions" key="Software\Policies\Mozilla\Firefox\FlashPlugin\Block" valuePrefix=""/>
+        <list id="Permissions" key="Software\Policies\Cliqz\FlashPlugin\Block" valuePrefix=""/>
       </elements>
     </policy>
-    <policy name="FlashPlugin_Default" class="Both" displayName="$(string.FlashPlugin_Default)" explainText="$(string.FlashPlugin_Default_Explain)" key="Software\Policies\Mozilla\Firefox\FlashPlugin" valueName="Default">
+    <policy name="FlashPlugin_Default" class="Both" displayName="$(string.FlashPlugin_Default)" explainText="$(string.FlashPlugin_Default_Explain)" key="Software\Policies\Cliqz\FlashPlugin" valueName="Default">
       <parentCategory ref="Flash"/>
-      <supportedOn ref="SUPPORTED_FF60"/>
+      <supportedOn ref="SUPPORTED_CLIQZ_127"/>
       <enabledValue>
         <decimal value="1"/>
       </enabledValue>
@@ -733,9 +685,9 @@
         <decimal value="0"/>
       </disabledValue>
     </policy>
-    <policy name="FlashPlugin_Locked" class="Both" displayName="$(string.FlashPlugin_Locked)" explainText="$(string.FlashPlugin_Locked_Explain)" key="Software\Policies\Mozilla\Firefox\FlashPlugin" valueName="Locked">
+    <policy name="FlashPlugin_Locked" class="Both" displayName="$(string.FlashPlugin_Locked)" explainText="$(string.FlashPlugin_Locked_Explain)" key="Software\Policies\Cliqz\FlashPlugin" valueName="Locked">
       <parentCategory ref="Flash"/>
-      <supportedOn ref="SUPPORTED_FF60"/>
+      <supportedOn ref="SUPPORTED_CLIQZ_127"/>
       <enabledValue>
         <decimal value="1"/>
       </enabledValue>
@@ -743,24 +695,24 @@
         <decimal value="0"/>
       </disabledValue>
     </policy>
-    <policy name="OverrideFirstRunPage" class="Both" displayName="$(string.OverrideFirstRunPage)" explainText="$(string.OverrideFirstRunPage_Explain)" key="Software\Policies\Mozilla\Firefox" presentation="$(presentation.OverridePage)" >
-      <parentCategory ref="firefox" />
-      <supportedOn ref="SUPPORTED_FF60" />
+    <policy name="OverrideFirstRunPage" class="Both" displayName="$(string.OverrideFirstRunPage)" explainText="$(string.OverrideFirstRunPage_Explain)" key="Software\Policies\Cliqz" presentation="$(presentation.OverridePage)" >
+      <parentCategory ref="cliqz" />
+      <supportedOn ref="SUPPORTED_CLIQZ_127" />
       <elements>
         <text id="OverridePage" valueName="OverrideFirstRunPage"/>
       </elements>
     </policy>
-    <policy name="OverridePostUpdatePage" class="Both" displayName="$(string.OverridePostUpdatePage)" explainText="$(string.OverridePostUpdatePage_Explain)" key="Software\Policies\Mozilla\Firefox" presentation="$(presentation.OverridePage)" >
-      <parentCategory ref="firefox" />
-      <supportedOn ref="SUPPORTED_FF60" />
+    <policy name="OverridePostUpdatePage" class="Both" displayName="$(string.OverridePostUpdatePage)" explainText="$(string.OverridePostUpdatePage_Explain)" key="Software\Policies\Cliqz" presentation="$(presentation.OverridePage)" >
+      <parentCategory ref="cliqz" />
+      <supportedOn ref="SUPPORTED_CLIQZ_127" />
       <elements>
         <text id="OverridePage" valueName="OverridePostUpdatePage"/>
       </elements>
     </policy>
     <!-- Alphabetization is based on name, so had to add P -->
-    <policy name="P_DisableSecurityBypass_InvalidCertificate" class="Both" displayName="$(string.DisableSecurityBypass_InvalidCertificate)" explainText="$(string.DisableSecurityBypass_InvalidCertificate_Explain)" key="Software\Policies\Mozilla\Firefox\DisableSecurityBypass" valueName="InvalidCertificate">
-      <parentCategory ref="firefox"/>
-      <supportedOn ref="SUPPORTED_FF60"/>
+    <policy name="P_DisableSecurityBypass_InvalidCertificate" class="Both" displayName="$(string.DisableSecurityBypass_InvalidCertificate)" explainText="$(string.DisableSecurityBypass_InvalidCertificate_Explain)" key="Software\Policies\Cliqz\DisableSecurityBypass" valueName="InvalidCertificate">
+      <parentCategory ref="cliqz"/>
+      <supportedOn ref="SUPPORTED_CLIQZ_127"/>
       <enabledValue>
         <decimal value="1"/>
       </enabledValue>
@@ -769,9 +721,9 @@
       </disabledValue>
     </policy>
     <!-- Alphabetization is based on name, so had to add P -->
-    <policy name="P_DisableSecurityBypass_SafeBrowsing" class="Both" displayName="$(string.DisableSecurityBypass_SafeBrowsing)" explainText="$(string.DisableSecurityBypass_SafeBrowsing_Explain)" key="Software\Policies\Mozilla\Firefox\DisableSecurityBypass" valueName="SafeBrowsing">
-      <parentCategory ref="firefox"/>
-      <supportedOn ref="SUPPORTED_FF60"/>
+    <policy name="P_DisableSecurityBypass_SafeBrowsing" class="Both" displayName="$(string.DisableSecurityBypass_SafeBrowsing)" explainText="$(string.DisableSecurityBypass_SafeBrowsing_Explain)" key="Software\Policies\Cliqz\DisableSecurityBypass" valueName="SafeBrowsing">
+      <parentCategory ref="cliqz"/>
+      <supportedOn ref="SUPPORTED_CLIQZ_127"/>
       <enabledValue>
         <decimal value="1"/>
       </enabledValue>
@@ -780,9 +732,9 @@
       </disabledValue>
     </policy>
     <!-- Alphabetization is based on name, so had to add C -->
-    <policy name="C_SanitizeOnShutdown" class="Both" displayName="$(string.SanitizeOnShutdown)" explainText="$(string.SanitizeOnShutdown_Explain)" key="Software\Policies\Mozilla\Firefox" valueName="SanitizeOnShutdown">
-      <parentCategory ref="firefox"/>
-      <supportedOn ref="SUPPORTED_FF60"/>
+    <policy name="C_SanitizeOnShutdown" class="Both" displayName="$(string.SanitizeOnShutdown)" explainText="$(string.SanitizeOnShutdown_Explain)" key="Software\Policies\Cliqz" valueName="SanitizeOnShutdown">
+      <parentCategory ref="cliqz"/>
+      <supportedOn ref="SUPPORTED_CLIQZ_127"/>
       <enabledValue>
         <decimal value="1"/>
       </enabledValue>
@@ -790,12 +742,18 @@
         <decimal value="0"/>
       </disabledValue>
     </policy>
-    <policy name="HomepageURL" class="Both" displayName="$(string.HomepageURL)" explainText="$(string.HomepageURL_Explain)" key="Software\Policies\Mozilla\Firefox\Homepage" presentation="$(presentation.HomepageURL)" >
-      <parentCategory ref="Homepage" />
-      <supportedOn ref="SUPPORTED_FF60" />
+    <policy name="HomepageURLs" class="Both" displayName="$(string.HomepageURLs)" explainText="$(string.HomepageURLs_Explain)" key="Software\Policies\Cliqz\Startup" presentation="$(presentation.HomepageURLs)" >
+      <parentCategory ref="Startup" />
+      <supportedOn ref="SUPPORTED_CLIQZ_127" />
       <elements >
-        <text id="HomepageURL" valueName="URL" required="true" />
-        <boolean id="HomepageLocked" key="Software\Policies\Mozilla\Firefox\Homepage" valueName="Locked">
+        <list id="HomepageURLs" key="Software\Policies\Cliqz\Startup\URLs" valuePrefix=""/>
+      </elements>
+    </policy>
+    <policy name="StartupOptions" class="Both" displayName="$(string.StartupOptions)" explainText="$(string.StartupOptions_Explain)" key="Software\Policies\Cliqz\Startup" presentation="$(presentation.StartupOptions)" >
+      <parentCategory ref="Startup" />
+      <supportedOn ref="SUPPORTED_CLIQZ_127" />
+      <elements >
+        <boolean id="StartupLocked" key="Software\Policies\Cliqz\Startup" valueName="Locked">
           <trueValue>
             <decimal value="1"/>
           </trueValue>
@@ -803,41 +761,44 @@
             <decimal value="0"/>
           </falseValue>
         </boolean>
-      </elements>
-    </policy>
-    <policy name="HomepageAdditional" class="Both" displayName="$(string.HomepageAdditional)" explainText="$(string.HomepageAdditional_Explain)" key="Software\Policies\Mozilla\Firefox\Homepage" presentation="$(presentation.HomepageAdditional)" >
-      <parentCategory ref="Homepage" />
-      <supportedOn ref="SUPPORTED_FF60" />
-      <elements >
-        <list id="HomepageAdditional" key="Software\Policies\Mozilla\Firefox\Homepage\Additional" valuePrefix=""/>
-      </elements>
-    </policy>
-    <policy name="HomepageStartPage" class="Both" displayName="$(string.HomepageStartPage)" explainText="$(string.HomepageStartPage_Explain)" key="Software\Policies\Mozilla\Firefox\Homepage" presentation="$(presentation.StartPage)" >
-      <parentCategory ref="Homepage" />
-      <supportedOn ref="SUPPORTED_FF64" />
-      <elements >
-        <enum id="StartPage" valueName="StartPage">
-          <item displayName="$(string.None)">
+        <boolean id="RestoreLastSession" key="Software\Policies\Cliqz\Startup" valueName="RestoreLastSession">
+          <trueValue>
+            <decimal value="1"/>
+          </trueValue>
+          <falseValue>
+            <decimal value="0"/>
+          </falseValue>
+        </boolean>
+        <boolean id="ShowHomepage" key="Software\Policies\Cliqz\Startup" valueName="ShowHomepage">
+          <trueValue>
+            <decimal value="1"/>
+          </trueValue>
+          <falseValue>
+            <decimal value="0"/>
+          </falseValue>
+        </boolean>
+        <enum id="Homepage" valueName="Homepage">
+          <item displayName="$(string.Default)">
             <value>
-              <string>none</string>
+              <string>default</string>
             </value>
           </item>
-          <item displayName="$(string.Homepage)">
+          <item displayName="$(string.CustomURLs)">
             <value>
-              <string>homepage</string>
+              <string>urls</string>
             </value>
           </item>
-          <item displayName="$(string.PreviousSession)">
+          <item displayName="$(string.BlankPage)">
             <value>
-              <string>previous-session</string>
+              <string>blank</string>
             </value>
           </item>
         </enum>
       </elements>
     </policy>
-    <policy name="Bookmark01" class="Both" displayName="$(string.Bookmark01)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Mozilla\Firefox\Bookmarks\1" presentation="$(presentation.Bookmark)" >
+    <policy name="Bookmark01" class="Both" displayName="$(string.Bookmark01)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Cliqz\Bookmarks\1" presentation="$(presentation.Bookmark)" >
       <parentCategory ref="Bookmarks" />
-      <supportedOn ref="SUPPORTED_FF60" />
+      <supportedOn ref="SUPPORTED_CLIQZ_127" />
       <elements >
         <text id="BookmarkTitle" valueName="Title" required="true" />
         <text id="BookmarkURL" valueName="URL" required="true" />
@@ -857,9 +818,9 @@
         </enum>
       </elements>
     </policy>
-    <policy name="Bookmark02" class="Both" displayName="$(string.Bookmark02)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Mozilla\Firefox\Bookmarks\10" presentation="$(presentation.Bookmark)" >
+    <policy name="Bookmark02" class="Both" displayName="$(string.Bookmark02)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Cliqz\Bookmarks\10" presentation="$(presentation.Bookmark)" >
       <parentCategory ref="Bookmarks" />
-      <supportedOn ref="SUPPORTED_FF60" />
+      <supportedOn ref="SUPPORTED_CLIQZ_127" />
       <elements >
         <text id="BookmarkTitle" valueName="Title" required="true" />
         <text id="BookmarkURL" valueName="URL" required="true" />
@@ -879,9 +840,9 @@
         </enum>
       </elements>
     </policy>
-    <policy name="Bookmark03" class="Both" displayName="$(string.Bookmark03)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Mozilla\Firefox\Bookmarks\11" presentation="$(presentation.Bookmark)" >
+    <policy name="Bookmark03" class="Both" displayName="$(string.Bookmark03)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Cliqz\Bookmarks\11" presentation="$(presentation.Bookmark)" >
       <parentCategory ref="Bookmarks" />
-      <supportedOn ref="SUPPORTED_FF60" />
+      <supportedOn ref="SUPPORTED_CLIQZ_127" />
       <elements >
         <text id="BookmarkTitle" valueName="Title" required="true" />
         <text id="BookmarkURL" valueName="URL" required="true" />
@@ -901,9 +862,9 @@
         </enum>
       </elements>
     </policy>
-    <policy name="Bookmark04" class="Both" displayName="$(string.Bookmark04)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Mozilla\Firefox\Bookmarks\12" presentation="$(presentation.Bookmark)" >
+    <policy name="Bookmark04" class="Both" displayName="$(string.Bookmark04)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Cliqz\Bookmarks\12" presentation="$(presentation.Bookmark)" >
       <parentCategory ref="Bookmarks" />
-      <supportedOn ref="SUPPORTED_FF60" />
+      <supportedOn ref="SUPPORTED_CLIQZ_127" />
       <elements >
         <text id="BookmarkTitle" valueName="Title" required="true" />
         <text id="BookmarkURL" valueName="URL" required="true" />
@@ -923,9 +884,9 @@
         </enum>
       </elements>
     </policy>
-    <policy name="Bookmark05" class="Both" displayName="$(string.Bookmark05)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Mozilla\Firefox\Bookmarks\13" presentation="$(presentation.Bookmark)" >
+    <policy name="Bookmark05" class="Both" displayName="$(string.Bookmark05)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Cliqz\Bookmarks\13" presentation="$(presentation.Bookmark)" >
       <parentCategory ref="Bookmarks" />
-      <supportedOn ref="SUPPORTED_FF60" />
+      <supportedOn ref="SUPPORTED_CLIQZ_127" />
       <elements >
         <text id="BookmarkTitle" valueName="Title" required="true" />
         <text id="BookmarkURL" valueName="URL" required="true" />
@@ -945,9 +906,9 @@
         </enum>
       </elements>
     </policy>
-	<policy name="Bookmark06" class="Both" displayName="$(string.Bookmark06)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Mozilla\Firefox\Bookmarks\14" presentation="$(presentation.Bookmark)" >
+	<policy name="Bookmark06" class="Both" displayName="$(string.Bookmark06)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Cliqz\Bookmarks\14" presentation="$(presentation.Bookmark)" >
       <parentCategory ref="Bookmarks" />
-      <supportedOn ref="SUPPORTED_FF60" />
+      <supportedOn ref="SUPPORTED_CLIQZ_127" />
       <elements >
         <text id="BookmarkTitle" valueName="Title" required="true" />
         <text id="BookmarkURL" valueName="URL" required="true" />
@@ -967,9 +928,9 @@
         </enum>
       </elements>
     </policy>
-	<policy name="Bookmark07" class="Both" displayName="$(string.Bookmark07)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Mozilla\Firefox\Bookmarks\15" presentation="$(presentation.Bookmark)" >
+	<policy name="Bookmark07" class="Both" displayName="$(string.Bookmark07)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Cliqz\Bookmarks\15" presentation="$(presentation.Bookmark)" >
       <parentCategory ref="Bookmarks" />
-      <supportedOn ref="SUPPORTED_FF60" />
+      <supportedOn ref="SUPPORTED_CLIQZ_127" />
       <elements >
         <text id="BookmarkTitle" valueName="Title" required="true" />
         <text id="BookmarkURL" valueName="URL" required="true" />
@@ -989,9 +950,9 @@
         </enum>
       </elements>
     </policy>
-	<policy name="Bookmark08" class="Both" displayName="$(string.Bookmark08)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Mozilla\Firefox\Bookmarks\16" presentation="$(presentation.Bookmark)" >
+	<policy name="Bookmark08" class="Both" displayName="$(string.Bookmark08)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Cliqz\Bookmarks\16" presentation="$(presentation.Bookmark)" >
       <parentCategory ref="Bookmarks" />
-      <supportedOn ref="SUPPORTED_FF60" />
+      <supportedOn ref="SUPPORTED_CLIQZ_127" />
       <elements >
         <text id="BookmarkTitle" valueName="Title" required="true" />
         <text id="BookmarkURL" valueName="URL" required="true" />
@@ -1011,9 +972,9 @@
         </enum>
       </elements>
     </policy>
-	<policy name="Bookmark09" class="Both" displayName="$(string.Bookmark09)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Mozilla\Firefox\Bookmarks\17" presentation="$(presentation.Bookmark)" >
+	<policy name="Bookmark09" class="Both" displayName="$(string.Bookmark09)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Cliqz\Bookmarks\17" presentation="$(presentation.Bookmark)" >
       <parentCategory ref="Bookmarks" />
-      <supportedOn ref="SUPPORTED_FF60" />
+      <supportedOn ref="SUPPORTED_CLIQZ_127" />
       <elements >
         <text id="BookmarkTitle" valueName="Title" required="true" />
         <text id="BookmarkURL" valueName="URL" required="true" />
@@ -1033,9 +994,9 @@
         </enum>
       </elements>
     </policy>
-	<policy name="Bookmark10" class="Both" displayName="$(string.Bookmark10)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Mozilla\Firefox\Bookmarks\18" presentation="$(presentation.Bookmark)" >
+	<policy name="Bookmark10" class="Both" displayName="$(string.Bookmark10)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Cliqz\Bookmarks\18" presentation="$(presentation.Bookmark)" >
       <parentCategory ref="Bookmarks" />
-      <supportedOn ref="SUPPORTED_FF60" />
+      <supportedOn ref="SUPPORTED_CLIQZ_127" />
       <elements >
         <text id="BookmarkTitle" valueName="Title" required="true" />
         <text id="BookmarkURL" valueName="URL" required="true" />
@@ -1055,9 +1016,9 @@
         </enum>
       </elements>
     </policy>
-	<policy name="Bookmark11" class="Both" displayName="$(string.Bookmark11)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Mozilla\Firefox\Bookmarks\19" presentation="$(presentation.Bookmark)" >
+	<policy name="Bookmark11" class="Both" displayName="$(string.Bookmark11)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Cliqz\Bookmarks\19" presentation="$(presentation.Bookmark)" >
       <parentCategory ref="Bookmarks" />
-      <supportedOn ref="SUPPORTED_FF60" />
+      <supportedOn ref="SUPPORTED_CLIQZ_127" />
       <elements >
         <text id="BookmarkTitle" valueName="Title" required="true" />
         <text id="BookmarkURL" valueName="URL" required="true" />
@@ -1077,9 +1038,9 @@
         </enum>
       </elements>
     </policy>
-	<policy name="Bookmark12" class="Both" displayName="$(string.Bookmark12)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Mozilla\Firefox\Bookmarks\2" presentation="$(presentation.Bookmark)" >
+	<policy name="Bookmark12" class="Both" displayName="$(string.Bookmark12)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Cliqz\Bookmarks\2" presentation="$(presentation.Bookmark)" >
       <parentCategory ref="Bookmarks" />
-      <supportedOn ref="SUPPORTED_FF60" />
+      <supportedOn ref="SUPPORTED_CLIQZ_127" />
       <elements >
         <text id="BookmarkTitle" valueName="Title" required="true" />
         <text id="BookmarkURL" valueName="URL" required="true" />
@@ -1099,9 +1060,9 @@
         </enum>
       </elements>
     </policy>
-	<policy name="Bookmark13" class="Both" displayName="$(string.Bookmark13)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Mozilla\Firefox\Bookmarks\20" presentation="$(presentation.Bookmark)" >
+	<policy name="Bookmark13" class="Both" displayName="$(string.Bookmark13)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Cliqz\Bookmarks\20" presentation="$(presentation.Bookmark)" >
       <parentCategory ref="Bookmarks" />
-      <supportedOn ref="SUPPORTED_FF60" />
+      <supportedOn ref="SUPPORTED_CLIQZ_127" />
       <elements >
         <text id="BookmarkTitle" valueName="Title" required="true" />
         <text id="BookmarkURL" valueName="URL" required="true" />
@@ -1121,9 +1082,9 @@
         </enum>
       </elements>
     </policy>
-	<policy name="Bookmark14" class="Both" displayName="$(string.Bookmark14)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Mozilla\Firefox\Bookmarks\21" presentation="$(presentation.Bookmark)" >
+	<policy name="Bookmark14" class="Both" displayName="$(string.Bookmark14)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Cliqz\Bookmarks\21" presentation="$(presentation.Bookmark)" >
       <parentCategory ref="Bookmarks" />
-      <supportedOn ref="SUPPORTED_FF60" />
+      <supportedOn ref="SUPPORTED_CLIQZ_127" />
       <elements >
         <text id="BookmarkTitle" valueName="Title" required="true" />
         <text id="BookmarkURL" valueName="URL" required="true" />
@@ -1143,9 +1104,9 @@
         </enum>
       </elements>
     </policy>
-	<policy name="Bookmark15" class="Both" displayName="$(string.Bookmark15)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Mozilla\Firefox\Bookmarks\22" presentation="$(presentation.Bookmark)" >
+	<policy name="Bookmark15" class="Both" displayName="$(string.Bookmark15)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Cliqz\Bookmarks\22" presentation="$(presentation.Bookmark)" >
       <parentCategory ref="Bookmarks" />
-      <supportedOn ref="SUPPORTED_FF60" />
+      <supportedOn ref="SUPPORTED_CLIQZ_127" />
       <elements >
         <text id="BookmarkTitle" valueName="Title" required="true" />
         <text id="BookmarkURL" valueName="URL" required="true" />
@@ -1165,9 +1126,9 @@
         </enum>
       </elements>
     </policy>
-	<policy name="Bookmark16" class="Both" displayName="$(string.Bookmark16)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Mozilla\Firefox\Bookmarks\23" presentation="$(presentation.Bookmark)" >
+	<policy name="Bookmark16" class="Both" displayName="$(string.Bookmark16)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Cliqz\Bookmarks\23" presentation="$(presentation.Bookmark)" >
       <parentCategory ref="Bookmarks" />
-      <supportedOn ref="SUPPORTED_FF60" />
+      <supportedOn ref="SUPPORTED_CLIQZ_127" />
       <elements >
         <text id="BookmarkTitle" valueName="Title" required="true" />
         <text id="BookmarkURL" valueName="URL" required="true" />
@@ -1187,9 +1148,9 @@
         </enum>
       </elements>
     </policy>
-	<policy name="Bookmark17" class="Both" displayName="$(string.Bookmark17)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Mozilla\Firefox\Bookmarks\24" presentation="$(presentation.Bookmark)" >
+	<policy name="Bookmark17" class="Both" displayName="$(string.Bookmark17)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Cliqz\Bookmarks\24" presentation="$(presentation.Bookmark)" >
       <parentCategory ref="Bookmarks" />
-      <supportedOn ref="SUPPORTED_FF60" />
+      <supportedOn ref="SUPPORTED_CLIQZ_127" />
       <elements >
         <text id="BookmarkTitle" valueName="Title" required="true" />
         <text id="BookmarkURL" valueName="URL" required="true" />
@@ -1209,9 +1170,9 @@
         </enum>
       </elements>
     </policy>
-	<policy name="Bookmark18" class="Both" displayName="$(string.Bookmark18)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Mozilla\Firefox\Bookmarks\25" presentation="$(presentation.Bookmark)" >
+	<policy name="Bookmark18" class="Both" displayName="$(string.Bookmark18)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Cliqz\Bookmarks\25" presentation="$(presentation.Bookmark)" >
       <parentCategory ref="Bookmarks" />
-      <supportedOn ref="SUPPORTED_FF60" />
+      <supportedOn ref="SUPPORTED_CLIQZ_127" />
       <elements >
         <text id="BookmarkTitle" valueName="Title" required="true" />
         <text id="BookmarkURL" valueName="URL" required="true" />
@@ -1231,9 +1192,9 @@
         </enum>
       </elements>
     </policy>
-	<policy name="Bookmark19" class="Both" displayName="$(string.Bookmark19)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Mozilla\Firefox\Bookmarks\26" presentation="$(presentation.Bookmark)" >
+	<policy name="Bookmark19" class="Both" displayName="$(string.Bookmark19)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Cliqz\Bookmarks\26" presentation="$(presentation.Bookmark)" >
       <parentCategory ref="Bookmarks" />
-      <supportedOn ref="SUPPORTED_FF60" />
+      <supportedOn ref="SUPPORTED_CLIQZ_127" />
       <elements >
         <text id="BookmarkTitle" valueName="Title" required="true" />
         <text id="BookmarkURL" valueName="URL" required="true" />
@@ -1253,9 +1214,9 @@
         </enum>
       </elements>
     </policy>
-	<policy name="Bookmark20" class="Both" displayName="$(string.Bookmark20)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Mozilla\Firefox\Bookmarks\27" presentation="$(presentation.Bookmark)" >
+	<policy name="Bookmark20" class="Both" displayName="$(string.Bookmark20)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Cliqz\Bookmarks\27" presentation="$(presentation.Bookmark)" >
       <parentCategory ref="Bookmarks" />
-      <supportedOn ref="SUPPORTED_FF60" />
+      <supportedOn ref="SUPPORTED_CLIQZ_127" />
       <elements >
         <text id="BookmarkTitle" valueName="Title" required="true" />
         <text id="BookmarkURL" valueName="URL" required="true" />
@@ -1275,9 +1236,9 @@
         </enum>
       </elements>
     </policy>
-	<policy name="Bookmark21" class="Both" displayName="$(string.Bookmark21)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Mozilla\Firefox\Bookmarks\28" presentation="$(presentation.Bookmark)" >
+	<policy name="Bookmark21" class="Both" displayName="$(string.Bookmark21)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Cliqz\Bookmarks\28" presentation="$(presentation.Bookmark)" >
       <parentCategory ref="Bookmarks" />
-      <supportedOn ref="SUPPORTED_FF60" />
+      <supportedOn ref="SUPPORTED_CLIQZ_127" />
       <elements >
         <text id="BookmarkTitle" valueName="Title" required="true" />
         <text id="BookmarkURL" valueName="URL" required="true" />
@@ -1297,9 +1258,9 @@
         </enum>
       </elements>
     </policy>
-	<policy name="Bookmark22" class="Both" displayName="$(string.Bookmark22)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Mozilla\Firefox\Bookmarks\29" presentation="$(presentation.Bookmark)" >
+	<policy name="Bookmark22" class="Both" displayName="$(string.Bookmark22)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Cliqz\Bookmarks\29" presentation="$(presentation.Bookmark)" >
       <parentCategory ref="Bookmarks" />
-      <supportedOn ref="SUPPORTED_FF60" />
+      <supportedOn ref="SUPPORTED_CLIQZ_127" />
       <elements >
         <text id="BookmarkTitle" valueName="Title" required="true" />
         <text id="BookmarkURL" valueName="URL" required="true" />
@@ -1319,9 +1280,9 @@
         </enum>
       </elements>
     </policy>
-	<policy name="Bookmark23" class="Both" displayName="$(string.Bookmark23)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Mozilla\Firefox\Bookmarks\3" presentation="$(presentation.Bookmark)" >
+	<policy name="Bookmark23" class="Both" displayName="$(string.Bookmark23)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Cliqz\Bookmarks\3" presentation="$(presentation.Bookmark)" >
       <parentCategory ref="Bookmarks" />
-      <supportedOn ref="SUPPORTED_FF60" />
+      <supportedOn ref="SUPPORTED_CLIQZ_127" />
       <elements >
         <text id="BookmarkTitle" valueName="Title" required="true" />
         <text id="BookmarkURL" valueName="URL" required="true" />
@@ -1341,9 +1302,9 @@
         </enum>
       </elements>
     </policy>
-	<policy name="Bookmark24" class="Both" displayName="$(string.Bookmark24)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Mozilla\Firefox\Bookmarks\30" presentation="$(presentation.Bookmark)" >
+	<policy name="Bookmark24" class="Both" displayName="$(string.Bookmark24)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Cliqz\Bookmarks\30" presentation="$(presentation.Bookmark)" >
       <parentCategory ref="Bookmarks" />
-      <supportedOn ref="SUPPORTED_FF60" />
+      <supportedOn ref="SUPPORTED_CLIQZ_127" />
       <elements >
         <text id="BookmarkTitle" valueName="Title" required="true" />
         <text id="BookmarkURL" valueName="URL" required="true" />
@@ -1363,9 +1324,9 @@
         </enum>
       </elements>
     </policy>
-	<policy name="Bookmark25" class="Both" displayName="$(string.Bookmark25)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Mozilla\Firefox\Bookmarks\31" presentation="$(presentation.Bookmark)" >
+	<policy name="Bookmark25" class="Both" displayName="$(string.Bookmark25)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Cliqz\Bookmarks\31" presentation="$(presentation.Bookmark)" >
       <parentCategory ref="Bookmarks" />
-      <supportedOn ref="SUPPORTED_FF60" />
+      <supportedOn ref="SUPPORTED_CLIQZ_127" />
       <elements >
         <text id="BookmarkTitle" valueName="Title" required="true" />
         <text id="BookmarkURL" valueName="URL" required="true" />
@@ -1385,9 +1346,9 @@
         </enum>
       </elements>
     </policy>
-	<policy name="Bookmark26" class="Both" displayName="$(string.Bookmark26)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Mozilla\Firefox\Bookmarks\32" presentation="$(presentation.Bookmark)" >
+	<policy name="Bookmark26" class="Both" displayName="$(string.Bookmark26)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Cliqz\Bookmarks\32" presentation="$(presentation.Bookmark)" >
       <parentCategory ref="Bookmarks" />
-      <supportedOn ref="SUPPORTED_FF60" />
+      <supportedOn ref="SUPPORTED_CLIQZ_127" />
       <elements >
         <text id="BookmarkTitle" valueName="Title" required="true" />
         <text id="BookmarkURL" valueName="URL" required="true" />
@@ -1407,9 +1368,9 @@
         </enum>
       </elements>
     </policy>
-	<policy name="Bookmark27" class="Both" displayName="$(string.Bookmark27)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Mozilla\Firefox\Bookmarks\33" presentation="$(presentation.Bookmark)" >
+	<policy name="Bookmark27" class="Both" displayName="$(string.Bookmark27)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Cliqz\Bookmarks\33" presentation="$(presentation.Bookmark)" >
       <parentCategory ref="Bookmarks" />
-      <supportedOn ref="SUPPORTED_FF60" />
+      <supportedOn ref="SUPPORTED_CLIQZ_127" />
       <elements >
         <text id="BookmarkTitle" valueName="Title" required="true" />
         <text id="BookmarkURL" valueName="URL" required="true" />
@@ -1429,9 +1390,9 @@
         </enum>
       </elements>
     </policy>
-	<policy name="Bookmark28" class="Both" displayName="$(string.Bookmark28)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Mozilla\Firefox\Bookmarks\34" presentation="$(presentation.Bookmark)" >
+	<policy name="Bookmark28" class="Both" displayName="$(string.Bookmark28)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Cliqz\Bookmarks\34" presentation="$(presentation.Bookmark)" >
       <parentCategory ref="Bookmarks" />
-      <supportedOn ref="SUPPORTED_FF60" />
+      <supportedOn ref="SUPPORTED_CLIQZ_127" />
       <elements >
         <text id="BookmarkTitle" valueName="Title" required="true" />
         <text id="BookmarkURL" valueName="URL" required="true" />
@@ -1451,9 +1412,9 @@
         </enum>
       </elements>
     </policy>
-	<policy name="Bookmark29" class="Both" displayName="$(string.Bookmark29)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Mozilla\Firefox\Bookmarks\35" presentation="$(presentation.Bookmark)" >
+	<policy name="Bookmark29" class="Both" displayName="$(string.Bookmark29)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Cliqz\Bookmarks\35" presentation="$(presentation.Bookmark)" >
       <parentCategory ref="Bookmarks" />
-      <supportedOn ref="SUPPORTED_FF60" />
+      <supportedOn ref="SUPPORTED_CLIQZ_127" />
       <elements >
         <text id="BookmarkTitle" valueName="Title" required="true" />
         <text id="BookmarkURL" valueName="URL" required="true" />
@@ -1473,9 +1434,9 @@
         </enum>
       </elements>
     </policy>
-	<policy name="Bookmark30" class="Both" displayName="$(string.Bookmark30)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Mozilla\Firefox\Bookmarks\36" presentation="$(presentation.Bookmark)" >
+	<policy name="Bookmark30" class="Both" displayName="$(string.Bookmark30)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Cliqz\Bookmarks\36" presentation="$(presentation.Bookmark)" >
       <parentCategory ref="Bookmarks" />
-      <supportedOn ref="SUPPORTED_FF60" />
+      <supportedOn ref="SUPPORTED_CLIQZ_127" />
       <elements >
         <text id="BookmarkTitle" valueName="Title" required="true" />
         <text id="BookmarkURL" valueName="URL" required="true" />
@@ -1495,9 +1456,9 @@
         </enum>
       </elements>
     </policy>
-	<policy name="Bookmark31" class="Both" displayName="$(string.Bookmark31)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Mozilla\Firefox\Bookmarks\37" presentation="$(presentation.Bookmark)" >
+	<policy name="Bookmark31" class="Both" displayName="$(string.Bookmark31)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Cliqz\Bookmarks\37" presentation="$(presentation.Bookmark)" >
       <parentCategory ref="Bookmarks" />
-      <supportedOn ref="SUPPORTED_FF60" />
+      <supportedOn ref="SUPPORTED_CLIQZ_127" />
       <elements >
         <text id="BookmarkTitle" valueName="Title" required="true" />
         <text id="BookmarkURL" valueName="URL" required="true" />
@@ -1517,9 +1478,9 @@
         </enum>
       </elements>
     </policy>
-	<policy name="Bookmark32" class="Both" displayName="$(string.Bookmark32)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Mozilla\Firefox\Bookmarks\38" presentation="$(presentation.Bookmark)" >
+	<policy name="Bookmark32" class="Both" displayName="$(string.Bookmark32)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Cliqz\Bookmarks\38" presentation="$(presentation.Bookmark)" >
       <parentCategory ref="Bookmarks" />
-      <supportedOn ref="SUPPORTED_FF60" />
+      <supportedOn ref="SUPPORTED_CLIQZ_127" />
       <elements >
         <text id="BookmarkTitle" valueName="Title" required="true" />
         <text id="BookmarkURL" valueName="URL" required="true" />
@@ -1539,9 +1500,9 @@
         </enum>
       </elements>
     </policy>
-	<policy name="Bookmark33" class="Both" displayName="$(string.Bookmark33)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Mozilla\Firefox\Bookmarks\39" presentation="$(presentation.Bookmark)" >
+	<policy name="Bookmark33" class="Both" displayName="$(string.Bookmark33)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Cliqz\Bookmarks\39" presentation="$(presentation.Bookmark)" >
       <parentCategory ref="Bookmarks" />
-      <supportedOn ref="SUPPORTED_FF60" />
+      <supportedOn ref="SUPPORTED_CLIQZ_127" />
       <elements >
         <text id="BookmarkTitle" valueName="Title" required="true" />
         <text id="BookmarkURL" valueName="URL" required="true" />
@@ -1561,9 +1522,9 @@
         </enum>
       </elements>
     </policy>
-	<policy name="Bookmark34" class="Both" displayName="$(string.Bookmark34)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Mozilla\Firefox\Bookmarks\4" presentation="$(presentation.Bookmark)" >
+	<policy name="Bookmark34" class="Both" displayName="$(string.Bookmark34)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Cliqz\Bookmarks\4" presentation="$(presentation.Bookmark)" >
       <parentCategory ref="Bookmarks" />
-      <supportedOn ref="SUPPORTED_FF60" />
+      <supportedOn ref="SUPPORTED_CLIQZ_127" />
       <elements >
         <text id="BookmarkTitle" valueName="Title" required="true" />
         <text id="BookmarkURL" valueName="URL" required="true" />
@@ -1583,9 +1544,9 @@
         </enum>
       </elements>
     </policy>
-	<policy name="Bookmark35" class="Both" displayName="$(string.Bookmark35)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Mozilla\Firefox\Bookmarks\40" presentation="$(presentation.Bookmark)" >
+	<policy name="Bookmark35" class="Both" displayName="$(string.Bookmark35)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Cliqz\Bookmarks\40" presentation="$(presentation.Bookmark)" >
       <parentCategory ref="Bookmarks" />
-      <supportedOn ref="SUPPORTED_FF60" />
+      <supportedOn ref="SUPPORTED_CLIQZ_127" />
       <elements >
         <text id="BookmarkTitle" valueName="Title" required="true" />
         <text id="BookmarkURL" valueName="URL" required="true" />
@@ -1605,9 +1566,9 @@
         </enum>
       </elements>
     </policy>
-	<policy name="Bookmark36" class="Both" displayName="$(string.Bookmark36)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Mozilla\Firefox\Bookmarks\41" presentation="$(presentation.Bookmark)" >
+	<policy name="Bookmark36" class="Both" displayName="$(string.Bookmark36)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Cliqz\Bookmarks\41" presentation="$(presentation.Bookmark)" >
       <parentCategory ref="Bookmarks" />
-      <supportedOn ref="SUPPORTED_FF60" />
+      <supportedOn ref="SUPPORTED_CLIQZ_127" />
       <elements >
         <text id="BookmarkTitle" valueName="Title" required="true" />
         <text id="BookmarkURL" valueName="URL" required="true" />
@@ -1627,9 +1588,9 @@
         </enum>
       </elements>
     </policy>
-	<policy name="Bookmark37" class="Both" displayName="$(string.Bookmark37)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Mozilla\Firefox\Bookmarks\42" presentation="$(presentation.Bookmark)" >
+	<policy name="Bookmark37" class="Both" displayName="$(string.Bookmark37)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Cliqz\Bookmarks\42" presentation="$(presentation.Bookmark)" >
       <parentCategory ref="Bookmarks" />
-      <supportedOn ref="SUPPORTED_FF60" />
+      <supportedOn ref="SUPPORTED_CLIQZ_127" />
       <elements >
         <text id="BookmarkTitle" valueName="Title" required="true" />
         <text id="BookmarkURL" valueName="URL" required="true" />
@@ -1649,9 +1610,9 @@
         </enum>
       </elements>
     </policy>
-	<policy name="Bookmark38" class="Both" displayName="$(string.Bookmark38)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Mozilla\Firefox\Bookmarks\43" presentation="$(presentation.Bookmark)" >
+	<policy name="Bookmark38" class="Both" displayName="$(string.Bookmark38)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Cliqz\Bookmarks\43" presentation="$(presentation.Bookmark)" >
       <parentCategory ref="Bookmarks" />
-      <supportedOn ref="SUPPORTED_FF60" />
+      <supportedOn ref="SUPPORTED_CLIQZ_127" />
       <elements >
         <text id="BookmarkTitle" valueName="Title" required="true" />
         <text id="BookmarkURL" valueName="URL" required="true" />
@@ -1671,9 +1632,9 @@
         </enum>
       </elements>
     </policy>
-	<policy name="Bookmark39" class="Both" displayName="$(string.Bookmark39)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Mozilla\Firefox\Bookmarks\44" presentation="$(presentation.Bookmark)" >
+	<policy name="Bookmark39" class="Both" displayName="$(string.Bookmark39)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Cliqz\Bookmarks\44" presentation="$(presentation.Bookmark)" >
       <parentCategory ref="Bookmarks" />
-      <supportedOn ref="SUPPORTED_FF60" />
+      <supportedOn ref="SUPPORTED_CLIQZ_127" />
       <elements >
         <text id="BookmarkTitle" valueName="Title" required="true" />
         <text id="BookmarkURL" valueName="URL" required="true" />
@@ -1693,9 +1654,9 @@
         </enum>
       </elements>
     </policy>
-	<policy name="Bookmark40" class="Both" displayName="$(string.Bookmark40)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Mozilla\Firefox\Bookmarks\45" presentation="$(presentation.Bookmark)" >
+	<policy name="Bookmark40" class="Both" displayName="$(string.Bookmark40)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Cliqz\Bookmarks\45" presentation="$(presentation.Bookmark)" >
       <parentCategory ref="Bookmarks" />
-      <supportedOn ref="SUPPORTED_FF60" />
+      <supportedOn ref="SUPPORTED_CLIQZ_127" />
       <elements >
         <text id="BookmarkTitle" valueName="Title" required="true" />
         <text id="BookmarkURL" valueName="URL" required="true" />
@@ -1715,9 +1676,9 @@
         </enum>
       </elements>
     </policy>
-	<policy name="Bookmark41" class="Both" displayName="$(string.Bookmark41)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Mozilla\Firefox\Bookmarks\46" presentation="$(presentation.Bookmark)" >
+	<policy name="Bookmark41" class="Both" displayName="$(string.Bookmark41)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Cliqz\Bookmarks\46" presentation="$(presentation.Bookmark)" >
       <parentCategory ref="Bookmarks" />
-      <supportedOn ref="SUPPORTED_FF60" />
+      <supportedOn ref="SUPPORTED_CLIQZ_127" />
       <elements >
         <text id="BookmarkTitle" valueName="Title" required="true" />
         <text id="BookmarkURL" valueName="URL" required="true" />
@@ -1737,9 +1698,9 @@
         </enum>
       </elements>
     </policy>
-	<policy name="Bookmark42" class="Both" displayName="$(string.Bookmark42)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Mozilla\Firefox\Bookmarks\47" presentation="$(presentation.Bookmark)" >
+	<policy name="Bookmark42" class="Both" displayName="$(string.Bookmark42)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Cliqz\Bookmarks\47" presentation="$(presentation.Bookmark)" >
       <parentCategory ref="Bookmarks" />
-      <supportedOn ref="SUPPORTED_FF60" />
+      <supportedOn ref="SUPPORTED_CLIQZ_127" />
       <elements >
         <text id="BookmarkTitle" valueName="Title" required="true" />
         <text id="BookmarkURL" valueName="URL" required="true" />
@@ -1759,9 +1720,9 @@
         </enum>
       </elements>
     </policy>
-	<policy name="Bookmark43" class="Both" displayName="$(string.Bookmark43)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Mozilla\Firefox\Bookmarks\48" presentation="$(presentation.Bookmark)" >
+	<policy name="Bookmark43" class="Both" displayName="$(string.Bookmark43)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Cliqz\Bookmarks\48" presentation="$(presentation.Bookmark)" >
       <parentCategory ref="Bookmarks" />
-      <supportedOn ref="SUPPORTED_FF60" />
+      <supportedOn ref="SUPPORTED_CLIQZ_127" />
       <elements >
         <text id="BookmarkTitle" valueName="Title" required="true" />
         <text id="BookmarkURL" valueName="URL" required="true" />
@@ -1781,9 +1742,9 @@
         </enum>
       </elements>
     </policy>
-	<policy name="Bookmark44" class="Both" displayName="$(string.Bookmark44)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Mozilla\Firefox\Bookmarks\49" presentation="$(presentation.Bookmark)" >
+	<policy name="Bookmark44" class="Both" displayName="$(string.Bookmark44)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Cliqz\Bookmarks\49" presentation="$(presentation.Bookmark)" >
       <parentCategory ref="Bookmarks" />
-      <supportedOn ref="SUPPORTED_FF60" />
+      <supportedOn ref="SUPPORTED_CLIQZ_127" />
       <elements >
         <text id="BookmarkTitle" valueName="Title" required="true" />
         <text id="BookmarkURL" valueName="URL" required="true" />
@@ -1803,9 +1764,9 @@
         </enum>
       </elements>
     </policy>
-	<policy name="Bookmark45" class="Both" displayName="$(string.Bookmark45)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Mozilla\Firefox\Bookmarks\5" presentation="$(presentation.Bookmark)" >
+	<policy name="Bookmark45" class="Both" displayName="$(string.Bookmark45)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Cliqz\Bookmarks\5" presentation="$(presentation.Bookmark)" >
       <parentCategory ref="Bookmarks" />
-      <supportedOn ref="SUPPORTED_FF60" />
+      <supportedOn ref="SUPPORTED_CLIQZ_127" />
       <elements >
         <text id="BookmarkTitle" valueName="Title" required="true" />
         <text id="BookmarkURL" valueName="URL" required="true" />
@@ -1825,9 +1786,9 @@
         </enum>
       </elements>
     </policy>
-	<policy name="Bookmark46" class="Both" displayName="$(string.Bookmark46)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Mozilla\Firefox\Bookmarks\50" presentation="$(presentation.Bookmark)" >
+	<policy name="Bookmark46" class="Both" displayName="$(string.Bookmark46)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Cliqz\Bookmarks\50" presentation="$(presentation.Bookmark)" >
       <parentCategory ref="Bookmarks" />
-      <supportedOn ref="SUPPORTED_FF60" />
+      <supportedOn ref="SUPPORTED_CLIQZ_127" />
       <elements >
         <text id="BookmarkTitle" valueName="Title" required="true" />
         <text id="BookmarkURL" valueName="URL" required="true" />
@@ -1847,9 +1808,9 @@
         </enum>
       </elements>
     </policy>
-	<policy name="Bookmark47" class="Both" displayName="$(string.Bookmark47)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Mozilla\Firefox\Bookmarks\6" presentation="$(presentation.Bookmark)" >
+	<policy name="Bookmark47" class="Both" displayName="$(string.Bookmark47)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Cliqz\Bookmarks\6" presentation="$(presentation.Bookmark)" >
       <parentCategory ref="Bookmarks" />
-      <supportedOn ref="SUPPORTED_FF60" />
+      <supportedOn ref="SUPPORTED_CLIQZ_127" />
       <elements >
         <text id="BookmarkTitle" valueName="Title" required="true" />
         <text id="BookmarkURL" valueName="URL" required="true" />
@@ -1869,9 +1830,9 @@
         </enum>
       </elements>
     </policy>
-	<policy name="Bookmark48" class="Both" displayName="$(string.Bookmark48)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Mozilla\Firefox\Bookmarks\7" presentation="$(presentation.Bookmark)" >
+	<policy name="Bookmark48" class="Both" displayName="$(string.Bookmark48)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Cliqz\Bookmarks\7" presentation="$(presentation.Bookmark)" >
       <parentCategory ref="Bookmarks" />
-      <supportedOn ref="SUPPORTED_FF60" />
+      <supportedOn ref="SUPPORTED_CLIQZ_127" />
       <elements >
         <text id="BookmarkTitle" valueName="Title" required="true" />
         <text id="BookmarkURL" valueName="URL" required="true" />
@@ -1891,9 +1852,9 @@
         </enum>
       </elements>
     </policy>
-	<policy name="Bookmark49" class="Both" displayName="$(string.Bookmark49)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Mozilla\Firefox\Bookmarks\8" presentation="$(presentation.Bookmark)" >
+	<policy name="Bookmark49" class="Both" displayName="$(string.Bookmark49)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Cliqz\Bookmarks\8" presentation="$(presentation.Bookmark)" >
       <parentCategory ref="Bookmarks" />
-      <supportedOn ref="SUPPORTED_FF60" />
+      <supportedOn ref="SUPPORTED_CLIQZ_127" />
       <elements >
         <text id="BookmarkTitle" valueName="Title" required="true" />
         <text id="BookmarkURL" valueName="URL" required="true" />
@@ -1913,9 +1874,9 @@
         </enum>
       </elements>
     </policy>
-	<policy name="Bookmark50" class="Both" displayName="$(string.Bookmark50)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Mozilla\Firefox\Bookmarks\9" presentation="$(presentation.Bookmark)" >
+	<policy name="Bookmark50" class="Both" displayName="$(string.Bookmark50)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Cliqz\Bookmarks\9" presentation="$(presentation.Bookmark)" >
       <parentCategory ref="Bookmarks" />
-      <supportedOn ref="SUPPORTED_FF60" />
+      <supportedOn ref="SUPPORTED_CLIQZ_127" />
       <elements >
         <text id="BookmarkTitle" valueName="Title" required="true" />
         <text id="BookmarkURL" valueName="URL" required="true" />
@@ -1935,11 +1896,11 @@
         </enum>
       </elements>
     </policy>
-    <policy name="Proxy" class="Both" displayName="$(string.Proxy)" explainText="$(string.Proxy_Explain)" key="Software\Policies\Mozilla\Firefox\Proxy" presentation="$(presentation.Proxy)" >
-      <parentCategory ref="firefox" />
-      <supportedOn ref="SUPPORTED_FF60" />
+    <policy name="Proxy" class="Both" displayName="$(string.Proxy)" explainText="$(string.Proxy_Explain)" key="Software\Policies\Cliqz\Proxy" presentation="$(presentation.Proxy)" >
+      <parentCategory ref="cliqz" />
+      <supportedOn ref="SUPPORTED_CLIQZ_127" />
       <elements >
-        <boolean id="ProxyLocked" key="Software\Policies\Mozilla\Firefox\Proxy" valueName="Locked">
+        <boolean id="ProxyLocked" key="Software\Policies\Cliqz\Proxy" valueName="Locked">
           <trueValue>
             <decimal value="1"/>
           </trueValue>
@@ -1975,7 +1936,7 @@
           </item>
         </enum>
         <text id="HTTPProxy" valueName="HTTPProxy"/>
-        <boolean id="UseHTTPProxyForAllProtocols" key="Software\Policies\Mozilla\Firefox\Proxy" valueName="UseHTTPProxyForAllProtocols">
+        <boolean id="UseHTTPProxyForAllProtocols" key="Software\Policies\Cliqz\Proxy" valueName="UseHTTPProxyForAllProtocols">
           <trueValue>
             <decimal value="1"/>
           </trueValue>
@@ -2000,7 +1961,7 @@
         </enum>
         <text id="AutoConfigURL" valueName="AutoConfigURL"/>
         <text id="Passthrough" valueName="Passthrough"/>
-        <boolean id="AutoLogin" key="Software\Policies\Mozilla\Firefox\Proxy" valueName="AutoLogin">
+        <boolean id="AutoLogin" key="Software\Policies\Cliqz\Proxy" valueName="AutoLogin">
           <trueValue>
             <decimal value="1"/>
           </trueValue>
@@ -2008,45 +1969,7 @@
             <decimal value="0"/>
           </falseValue>
         </boolean>
-        <boolean id="UseProxyForDNS" key="Software\Policies\Mozilla\Firefox\Proxy" valueName="UseProxyForDNS">
-          <trueValue>
-            <decimal value="1"/>
-          </trueValue>
-          <falseValue>
-            <decimal value="0"/>
-          </falseValue>
-        </boolean>
-      </elements>
-    </policy>
-    <policy name="SearchBar" class="Both" displayName="$(string.SearchBar)" explainText="$(string.SearchBar_Explain)" key="Software\Policies\Mozilla\Firefox"  presentation="$(presentation.SearchBar)">
-      <parentCategory ref="firefox"/>
-      <supportedOn ref="SUPPORTED_FF60"/>
-      <elements>
-        <enum id="SearchBar" valueName="SearchBar">
-          <item displayName="$(string.SearchBar_Unified)">
-            <value>
-              <string>unified</string>
-            </value>
-          </item>
-          <item displayName="$(string.SearchBar_Separate)">
-            <value>
-              <string>separate</string>
-            </value>
-          </item>
-        </enum>
-      </elements>
-    </policy>
-    <policy name="TrackingProtection" class="Both" displayName="$(string.TrackingProtection)" explainText="$(string.TrackingProtection_Explain)" key="Software\Policies\Mozilla\Firefox\EnableTrackingProtection" valueName="Value" presentation="$(presentation.TrackingProtection)">
-      <parentCategory ref="firefox"/>
-      <supportedOn ref="SUPPORTED_FF60"/>
-      <enabledValue>
-        <decimal value="1"/>
-      </enabledValue>
-      <disabledValue>
-        <decimal value="0"/>
-      </disabledValue>
-      <elements >
-        <boolean id="TrackingProtectionLocked" key="Software\Policies\Mozilla\Firefox\EnableTrackingProtection" valueName="Locked">
+        <boolean id="UseProxyForDNS" key="Software\Policies\Cliqz\Proxy" valueName="UseProxyForDNS">
           <trueValue>
             <decimal value="1"/>
           </trueValue>
@@ -2058,188 +1981,37 @@
     </policy>
     <!-- Alphabetization is based on name, so had to add B -->
     <policy name="B_WebsiteFilter_Block" class="Both" displayName="$(string.WebsiteFilter_Block)" explainText="$(string.WebsiteFilter_Block_Explain)" key="Software\Policies\Mozilla\WebsiteFilter\Block" presentation="$(presentation.WebsiteFilter)">
-      <parentCategory ref="firefox"/>
-      <supportedOn ref="SUPPORTED_FF60"/>
+      <parentCategory ref="cliqz"/>
+      <supportedOn ref="SUPPORTED_CLIQZ_127"/>
       <elements>
-        <list id="WebsiteFilter" key="Software\Policies\Mozilla\Firefox\WebsiteFilter\Block" valuePrefix=""/>
+        <list id="WebsiteFilter" key="Software\Policies\Cliqz\WebsiteFilter\Block" valuePrefix=""/>
       </elements>
     </policy>
     <!-- Alphabetization is based on name, so had to add B -->
     <policy name="B_WebsiteFilter_Exceptions" class="Both" displayName="$(string.WebsiteFilter_Exceptions)" explainText="$(string.WebsiteFilter_Exceptions_Explain)" key="Software\Policies\Mozilla\WebsiteFilter\Exceptions" presentation="$(presentation.WebsiteFilter)">
-      <parentCategory ref="firefox"/>
-      <supportedOn ref="SUPPORTED_FF60"/>
+      <parentCategory ref="cliqz"/>
+      <supportedOn ref="SUPPORTED_CLIQZ_127"/>
       <elements>
-        <list id="WebsiteFilter" key="Software\Policies\Mozilla\Firefox\WebsiteFilter\Exceptions" valuePrefix=""/>
+        <list id="WebsiteFilter" key="Software\Policies\Cliqz\WebsiteFilter\Exceptions" valuePrefix=""/>
       </elements>
     </policy>
-    <policy name="SearchEngines_1" class="Both" displayName="$(string.SearchEngines_1)" explainText="$(string.SearchEngines_Explain)" key="Software\Policies\Mozilla\Firefox\SearchEngines\Add\1" presentation="$(presentation.SearchEngine)" >
-      <parentCategory ref="Search" />
-      <supportedOn ref="SUPPORTED_FF60ESR" />
-      <elements >
-        <text id="SearchEngine_Name" valueName="Name" required="true" />
-        <text id="SearchEngine_URLTemplate" valueName="URLTemplate" required="true" />
-        <enum id="SearchEngine_Method" valueName="Method">
-          <item displayName="$(string.SearchEngine_Method_GET)">
-            <value>
-              <string>GET</string>
-            </value>
-          </item>
-          <item displayName="$(string.SearchEngine_Method_POST)">
-            <value>
-              <string>POST</string>
-            </value>
-          </item>
-        </enum>
-        <text id="SearchEngine_IconURL" valueName="IconURL"/>
-        <text id="SearchEngine_Alias" valueName="Alias"/>
-        <text id="SearchEngine_Description" valueName="Description"/>
-        <text id="SearchEngine_SuggestURLTemplate" valueName="SuggestURLTemplate"/>
-      </elements>
-    </policy>
-    <policy name="SearchEngines_2" class="Both" displayName="$(string.SearchEngines_2)" explainText="$(string.SearchEngines_Explain)" key="Software\Policies\Mozilla\Firefox\SearchEngines\Add\2" presentation="$(presentation.SearchEngine)" >
-      <parentCategory ref="Search" />
-      <supportedOn ref="SUPPORTED_FF60ESR" />
-      <elements >
-        <text id="SearchEngine_Name" valueName="Name" required="true" />
-        <text id="SearchEngine_URLTemplate" valueName="URLTemplate" required="true" />
-        <enum id="SearchEngine_Method" valueName="Method">
-          <item displayName="$(string.SearchEngine_Method_GET)">
-            <value>
-              <string>GET</string>
-            </value>
-          </item>
-          <item displayName="$(string.SearchEngine_Method_POST)">
-            <value>
-              <string>POST</string>
-            </value>
-          </item>
-        </enum>
-        <text id="SearchEngine_IconURL" valueName="IconURL"/>
-        <text id="SearchEngine_Alias" valueName="Alias"/>
-        <text id="SearchEngine_Description" valueName="Description"/>
-        <text id="SearchEngine_SuggestURLTemplate" valueName="SuggestURLTemplate"/>
-      </elements>
-    </policy>
-    <policy name="SearchEngines_3" class="Both" displayName="$(string.SearchEngines_3)" explainText="$(string.SearchEngines_Explain)" key="Software\Policies\Mozilla\Firefox\SearchEngines\Add\3" presentation="$(presentation.SearchEngine)" >
-      <parentCategory ref="Search" />
-      <supportedOn ref="SUPPORTED_FF60ESR" />
-      <elements >
-        <text id="SearchEngine_Name" valueName="Name" required="true" />
-        <text id="SearchEngine_URLTemplate" valueName="URLTemplate" required="true" />
-        <enum id="SearchEngine_Method" valueName="Method">
-          <item displayName="$(string.SearchEngine_Method_GET)">
-            <value>
-              <string>GET</string>
-            </value>
-          </item>
-          <item displayName="$(string.SearchEngine_Method_POST)">
-            <value>
-              <string>POST</string>
-            </value>
-          </item>
-        </enum>
-        <text id="SearchEngine_IconURL" valueName="IconURL"/>
-        <text id="SearchEngine_Alias" valueName="Alias"/>
-        <text id="SearchEngine_Description" valueName="Description"/>
-        <text id="SearchEngine_SuggestURLTemplate" valueName="SuggestURLTemplate"/>
-      </elements>
-    </policy>
-    <policy name="SearchEngines_4" class="Both" displayName="$(string.SearchEngines_4)" explainText="$(string.SearchEngines_Explain)" key="Software\Policies\Mozilla\Firefox\SearchEngines\Add\4" presentation="$(presentation.SearchEngine)" >
-      <parentCategory ref="Search" />
-      <supportedOn ref="SUPPORTED_FF60ESR" />
-      <elements >
-        <text id="SearchEngine_Name" valueName="Name" required="true" />
-        <text id="SearchEngine_URLTemplate" valueName="URLTemplate" required="true" />
-        <enum id="SearchEngine_Method" valueName="Method">
-          <item displayName="$(string.SearchEngine_Method_GET)">
-            <value>
-              <string>GET</string>
-            </value>
-          </item>
-          <item displayName="$(string.SearchEngine_Method_POST)">
-            <value>
-              <string>POST</string>
-            </value>
-          </item>
-        </enum>
-        <text id="SearchEngine_IconURL" valueName="IconURL"/>
-        <text id="SearchEngine_Alias" valueName="Alias"/>
-        <text id="SearchEngine_Description" valueName="Description"/>
-        <text id="SearchEngine_SuggestURLTemplate" valueName="SuggestURLTemplate"/>
-      </elements>
-    </policy>
-    <policy name="SearchEngines_5" class="Both" displayName="$(string.SearchEngines_5)" explainText="$(string.SearchEngines_Explain)" key="Software\Policies\Mozilla\Firefox\SearchEngines\Add\5" presentation="$(presentation.SearchEngine)" >
-      <parentCategory ref="Search" />
-      <supportedOn ref="SUPPORTED_FF60ESR" />
-      <elements >
-        <text id="SearchEngine_Name" valueName="Name" required="true" />
-        <text id="SearchEngine_URLTemplate" valueName="URLTemplate" required="true" />
-        <enum id="SearchEngine_Method" valueName="Method">
-          <item displayName="$(string.SearchEngine_Method_GET)">
-            <value>
-              <string>GET</string>
-            </value>
-          </item>
-          <item displayName="$(string.SearchEngine_Method_POST)">
-            <value>
-              <string>POST</string>
-            </value>
-          </item>
-        </enum>
-        <text id="SearchEngine_IconURL" valueName="IconURL"/>
-        <text id="SearchEngine_Alias" valueName="Alias"/>
-        <text id="SearchEngine_Description" valueName="Description"/>
-        <text id="SearchEngine_SuggestURLTemplate" valueName="SuggestURLTemplate"/>
-      </elements>
-    </policy>
-    <policy name="SearchEngines_Default" class="Both" displayName="$(string.SearchEngines_Default)" explainText="$(string.SearchEngines_Default_Explain)" key="Software\Policies\Mozilla\Firefox\SearchEngines" presentation="$(presentation.SearchEngines_Default)" >
-      <parentCategory ref="Search" />
-      <supportedOn ref="SUPPORTED_FF60ESR" />
-      <elements >
-        <text id="SearchEngines_Default" valueName="Default" required="true" />
-      </elements>
-    </policy>
-    <policy name="SearchEngines_PreventInstalls" class="Both" displayName="$(string.SearchEngines_PreventInstalls)" explainText="$(string.SearchEngines_PreventInstalls_Explain)" key="Software\Policies\Mozilla\Firefox\SearchEngines" valueName="PreventInstalls">
-      <parentCategory ref="Search" />
-      <supportedOn ref="SUPPORTED_FF60ESR" />
-      <enabledValue>
-        <decimal value="1"/>
-      </enabledValue>
-      <disabledValue>
-        <decimal value="0"/>
-      </disabledValue>
-    </policy>
-    <policy name="SearchEngines_Remove" class="Both" displayName="$(string.SearchEngines_Remove)" explainText="$(string.SearchEngines_Remove_Explain)" key="Software\Policies\Mozilla\Firefox\SearchEngines\Remove" presentation="$(presentation.SearchEngines_Remove)" >
-      <parentCategory ref="Search" />
-      <supportedOn ref="SUPPORTED_FF60ESR" />
-      <elements >
-        <list id="SearchEngines_Remove" key="Software\Policies\Mozilla\Firefox\SearchEngines\Remove" valuePrefix=""/>
-      </elements>
-    </policy>
-    <policy name="AppUpdateURL" class="Both" displayName="$(string.AppUpdateURL)" explainText="$(string.AppUpdateURL_Explain)" key="Software\Policies\Mozilla\Firefox" presentation="$(presentation.AppUpdateURL)" >
-      <parentCategory ref="firefox" />
-      <supportedOn ref="SUPPORTED_FF62" />
+    <policy name="AppUpdateURL" class="Both" displayName="$(string.AppUpdateURL)" explainText="$(string.AppUpdateURL_Explain)" key="Software\Policies\Cliqz" presentation="$(presentation.AppUpdateURL)" >
+      <parentCategory ref="cliqz" />
+      <supportedOn ref="SUPPORTED_CLIQZ_127" />
       <elements >
         <text id="AppUpdateURL" valueName="AppUpdateURL" required="true" />
       </elements>
     </policy>
-    <policy name="SecurityDevices" class="Both" displayName="$(string.SecurityDevices)" explainText="$(string.SecurityDevices_Explain)" key="Software\Policies\Mozilla\Firefox" presentation="$(presentation.SecurityDevices)" >
-      <parentCategory ref="firefox" />
-      <supportedOn ref="SUPPORTED_FF64" />
+    <policy name="SecurityDevices" class="Both" displayName="$(string.SecurityDevices)" explainText="$(string.SecurityDevices_Explain)" key="Software\Policies\Cliqz" presentation="$(presentation.SecurityDevices)" >
+      <parentCategory ref="cliqz" />
+      <supportedOn ref="SUPPORTED_CLIQZ_127" />
       <elements >
-        <list id="SecurityDevices" key="Software\Policies\Mozilla\Firefox\SecurityDevices" valuePrefix="" explicitValue="true"/>
+        <list id="SecurityDevices" key="Software\Policies\Cliqz\SecurityDevices" valuePrefix="" explicitValue="true"/>
       </elements>
     </policy>
-    <policy name="RequestedLocales" class="Both" displayName="$(string.RequestedLocales)" explainText="$(string.RequestedLocales_Explain)" key="Software\Policies\Mozilla\Firefox" presentation="$(presentation.RequestedLocales)" >
-      <parentCategory ref="firefox" />
-      <supportedOn ref="SUPPORTED_FF64" />
-      <elements >
-        <list id="RequestedLocales" key="Software\Policies\Mozilla\Firefox\RequestedLocales" valuePrefix=""/>
-      </elements>
-    </policy>
-    <policy name="SSLVersionMin" class="Both" displayName="$(string.SSLVersionMin)" explainText="$(string.SSLVersionMin_Explain)" key="Software\Policies\Mozilla\Firefox" presentation="$(presentation.SSLVersion)" >
-      <parentCategory ref="firefox" />
-      <supportedOn ref="SUPPORTED_FF66" />
+    <policy name="SSLVersionMin" class="Both" displayName="$(string.SSLVersionMin)" explainText="$(string.SSLVersionMin_Explain)" key="Software\Policies\Cliqz" presentation="$(presentation.SSLVersion)" >
+      <parentCategory ref="cliqz" />
+      <supportedOn ref="SUPPORTED_CLIQZ_127" />
       <elements >
         <enum id="SSLVersion" valueName="SSLVersionMin">
           <item displayName="$(string.TLS1)">
@@ -2265,9 +2037,9 @@
         </enum>
       </elements>
     </policy>
-    <policy name="SSLVersionMax" class="Both" displayName="$(string.SSLVersionMax)" explainText="$(string.SSLVersionMax_Explain)" key="Software\Policies\Mozilla\Firefox" presentation="$(presentation.SSLVersion)" >
-      <parentCategory ref="firefox" />
-      <supportedOn ref="SUPPORTED_FF66" />
+    <policy name="SSLVersionMax" class="Both" displayName="$(string.SSLVersionMax)" explainText="$(string.SSLVersionMax_Explain)" key="Software\Policies\Cliqz" presentation="$(presentation.SSLVersion)" >
+      <parentCategory ref="cliqz" />
+      <supportedOn ref="SUPPORTED_CLIQZ_127" />
       <elements >
         <enum id="SSLVersion" valueName="SSLVersionMax">
           <item displayName="$(string.TLS1)">

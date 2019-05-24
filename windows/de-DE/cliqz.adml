@@ -5,13 +5,8 @@
   <resources >
     <stringTable >
       <string id="SUPPORTED_WINXPSP2">Microsoft Windows XP SP2 oder höher</string>
-      <string id="SUPPORTED_FF60">Firefox 60 oder höher</string>
-      <string id="SUPPORTED_FF62">Firefox 62 oder höher, Firefox 60.2 ESR oder höher</string>
-      <string id="SUPPORTED_FF63">Firefox 63 oder höher</string>
-      <string id="SUPPORTED_FF64">Firefox 64 oder höher, Firefox 60.4 ESR oder höher</string>
-      <string id="SUPPORTED_FF66">Firefox 66 oder höher, Firefox 60.6 ESR oder höher</string>
-      <string id="SUPPORTED_FF60ESR">Firefox 60 ESR oder höher</string>
-      <string id="firefox">Firefox</string>
+      <string id="SUPPORTED_CLIQZ_127">Cliqz 1.27.0 oder höher</string>
+      <string id="cliqz">Cliqz</string>
       <string id="Permissions_group">Berechtigungen</string>
       <string id="Camera_group">Camera</string>
       <string id="Microphone_group">Microphone</string>
@@ -25,7 +20,7 @@
       <string id="Addons_group">Addons</string>
       <string id="Extensions_group">Erweiterungen</string>
       <string id="Flash_group">Flash</string>
-      <string id="Homepage_group">Startseite</string>
+      <string id="Startup_group">Startseite</string>
       <string id="Search_group">Suche</string>
       <string id="Allow">Erlaubte Seiten</string>
       <string id="Block">Gesperrte Seiten</string>
@@ -333,7 +328,7 @@ Wenn Sie die Richtlinieneinstellung deaktivieren oder nicht konfigurieren wird e
 
 Wenn Sie die Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird die keine Daten der Chronik gelöscht.</string>
       <string id="WebsiteFilter_Block">Gesperrte Webseites</string>
-      <string id="WebsiteFilter_Block_Explain">Wenn Sie die Richtlinieneinstellung aktivieren, können Sie die Übereinstimmungsmuster für zu blockierende Webseiten angeben. Die Übereinstimmungsmuster sind unter https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Match_patterns dokumentiert. Derzeit werden nur http / https-Zugriffe unterstützt. Es gibt eine Beschränkung von 1000 Einträgen. 
+      <string id="WebsiteFilter_Block_Explain">Wenn Sie die Richtlinieneinstellung aktivieren, können Sie die Übereinstimmungsmuster für zu blockierende Webseiten angeben. Die Übereinstimmungsmuster sind unter https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Match_patterns dokumentiert. Derzeit werden nur http / https-Zugriffe unterstützt. Es gibt eine Beschränkung von 1000 Einträgen.
 
 Wenn Sie die Richtlinieneinstellung deaktivieren oder nicht konfigurieren, werden keine Webseiten gesperrt.</string>
       <string id="WebsiteFilter_Exceptions">Ausnahmen zu gesperrten Webseiten</string>
@@ -401,20 +396,19 @@ Wenn Sie die Richtlinieneinstellung deaktivieren oder nicht konfigurieren, werde
 Wenn Sie die Richtlinieneinstellung deaktivieren oder nicht konfigurieren, werden die Standardlesezeichen und Smart-Lesezeichen (meist besuchte, neueste Tags) erstellt.
 
 Hinweis: Diese Richtlinie ist nur wirksam, wenn Sie vor der ersten Ausführung von Firefox verwendet wurde.</string>
-      <string id="HomepageURL">Startseite</string>
-      <string id="HomepageURL_Explain">Wenn Sie die Richtlinieneinstellung aktivieren, können Sie eine Startseite festlegen. Sie können die Startseite auch sperren.
+      <string id="HomepageURLs">Set of URL(s) for Home page</string>
+      <string id="HomepageURLs_Explain">If this policy is enabled, you can set one or more URLs as home pages. They are opened in multiple tabs.
 
-Wenn Sie die Richtlinieneinstellung deaktivieren oder nicht konfigurieren, können Benutzer eine Startseite festlegen.</string>
-      <string id="HomepageAdditional">Zusätzliche Startseiten</string>
-      <string id="HomepageAdditional_Explain">Wenn Sie die Richtlinieneinstellung aktivieren, können Sie zusätzliche Startseiten festlegen. Diese werden in mehreren Registerkarten geöffnet.
+If this policy is disabled or not configured, the user can set and change the home page URL(s).</string>
+      <string id="StartupOptions">Startup Options</string>
+      <string id="StartupOptions_Explain">If this policy is enabled, you can set Startup options for Cliqz starts. Here you can also lock all Startup Options.
 
-Wenn Sie die Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird nur eine Startseite angezeigt.</string>
-      <string id="HomepageStartPage">Start Page</string>
-      <string id="HomepageStartPage_Explain">If this policy is enabled, you can change what is displayed when Firefox starts. It can be the homepage, the previous session, or a blank page.
+If this policy is disabled or not configured, the Startup options will be deafult one.</string>
+      <string id="Default">Cliqz-Startseite (Standart)</string>
+      <string id="CustomURLs">Benutzerdefinierte Adressen...</string>
+      <string id="BlankPage">Leere Seite</string>
+      <string id="Startup">Startup</string>
 
-If this policy is disabled or not configured, the start page defaults to the previous session.</string>
-      <string id="None">None</string>
-      <string id="Homepage">Homepage</string>
       <string id="PreviousSession">Previous Session</string>
       <string id="Proxy">Proxy Einstellungen</string>
       <string id="Proxy_Explain">Wenn Sie die Richtlinieneinstellung aktivieren, können Sie die Netzwerkeinstellungen ändern und sperren.
@@ -533,18 +527,14 @@ If this policy is disabled or not configured, Firefox defaults to a maximum of T
           <label>URL:</label>
         </textBox>
       </presentation>
-      <presentation id="HomepageURL">
-        <text>URL:</text>
-        <textBox refId="HomepageURL">
-          <label/>
-        </textBox>
-        <checkBox refId="HomepageLocked">Änderung der Startseite nicht erlauben</checkBox>
+      <presentation id="HomepageURLs">
+        <listBox refId="HomepageURLs">Set of URL(s) for home page(s).</listBox>
       </presentation>
-      <presentation id="HomepageAdditional">
-        <listBox refId="HomepageAdditional">Weitere Startseiten</listBox>
-      </presentation>
-      <presentation id="StartPage">
-        <dropdownList refId="StartPage"/>
+      <presentation id="StartupOptions">
+        <checkBox refId="RestoreLastSession">Fenster und Tabs der letzten Sitzung anzeigen.</checkBox>
+        <checkBox refId="ShowHomepage">Startseite anzeigen.</checkBox>
+        <checkBox refId="StartupLocked">Änderung der Startseite nicht erlauben.</checkBox>
+        <dropdownList refId="Homepage"/>
       </presentation>
       <presentation id="Bookmark">
         <text>Titel:</text>

@@ -5,13 +5,8 @@
   <resources >
     <stringTable >
       <string id="SUPPORTED_WINXPSP2">Microsoft Windows XP SP2 or later</string>
-      <string id="SUPPORTED_FF60">Firefox 60 or later, Firefox 60 ESR or later</string>
-      <string id="SUPPORTED_FF62">Firefox 62 or later, Firefox 60.2 ESR or later</string>
-      <string id="SUPPORTED_FF63">Firefox 63 or later</string>
-      <string id="SUPPORTED_FF64">Firefox 64 or later, Firefox 60.4 ESR or later</string>
-      <string id="SUPPORTED_FF66">Firefox 66 or later, Firefox 60.6 ESR or later</string>
-      <string id="SUPPORTED_FF60ESR">Firefox 60 ESR or later</string>
-      <string id="firefox">Firefox</string>
+      <string id="SUPPORTED_CLIQZ_127">Cliqz 1.27 or later</string>
+      <string id="cliqz">Cliqz</string>
       <string id="Permissions_group">Permissions</string>
       <string id="Camera_group">Camera</string>
       <string id="Microphone_group">Microphone</string>
@@ -25,7 +20,7 @@
       <string id="Addons_group">Addons</string>
       <string id="Extensions_group">Extensions</string>
       <string id="Flash_group">Flash</string>
-      <string id="Homepage_group">Home page</string>
+      <string id="Startup_group">Startup</string>
       <string id="Search_group">Search</string>
       <string id="Allow">Allowed Sites</string>
       <string id="Block">Blocked Sites</string>
@@ -76,17 +71,17 @@ If this policy is disabled or not configured, the user can access Troubleshootin
 
 If this policy is disabled or not configured, users can set images as their desktop background.</string>
       <string id="Certificates_ImportEnterpriseRoots">Import Enterprise Roots</string>
-      <string id="Certificates_ImportEnterpriseRoots_Explain">If this policy is enabled, Firefox will read certificates from the Windows certificate store.
+      <string id="Certificates_ImportEnterpriseRoots_Explain">If this policy is enabled, Cliqz will read certificates from the Windows certificate store.
 
-If this policy is disabled or not configured, Firefox will not read certificates from the Windows certificate store.</string>
+If this policy is disabled or not configured, Cliqz will not read certificates from the Windows certificate store.</string>
       <string id="Certificates_Install">Install Certificates</string>
-      <string id="Certificates_Install_Explain">If this policy is enabled, Firefox will install the listed certificates into Firefox. It will look in %USERPROFILE%\AppData\Local\Mozilla\Certificates and %USERPROFILE%\AppData\Roaming\Mozilla\Certificates.
+      <string id="Certificates_Install_Explain">If this policy is enabled, Cliqz will install the listed certificates into Cliqz. It will look in %USERPROFILE%\AppData\Local\Cliqz\Certificates and %USERPROFILE%\AppData\Roaming\Cliqz\Certificates.
 
-If this policy is disabled or not configured, Firefox will not install additional certificates.</string>
+If this policy is disabled or not configured, Cliqz will not install additional certificates.</string>
       <string id="DNSOverHTTPS">Configure DNS Over HTTPS</string>
       <string id="DNSOverHTTPS_Explain">If this policy is enabled, the default configuration for DNS over HTTPS can be changed.
 
-If this policy is disabled or not configured, DNS Over HTTPS uses the default Firefox configuration.</string>
+If this policy is disabled or not configured, DNS Over HTTPS uses the default Cliqz configuration.</string>
       <string id="DisableMasterPasswordCreation">Disable Master Password Creation</string>
       <string id="DisableMasterPasswordCreation_Explain">If this policy is enabled, users cannot create a master password.
 
@@ -96,13 +91,13 @@ If this policy is disabled or not configured, users can create a master password
 
 If this policy is disabled or not configured, the browser receives updates.</string>
       <string id="DisableBuiltinPDFViewer">Disable Built-in PDF Viewer (PDF.js)</string>
-      <string id="DisableBuiltinPDFViewer_Explain">If this policy is enabled, PDF files are not viewed within Firefox.
+      <string id="DisableBuiltinPDFViewer_Explain">If this policy is enabled, PDF files are not viewed within Cliqz.
 
-If this policy is disabled or not configured, PDF files are viewed within Firefox.</string>
+If this policy is disabled or not configured, PDF files are viewed within Cliqz.</string>
       <string id="DisableDeveloperTools">Disable Developer Tools</string>
-      <string id="DisableDeveloperTools_Explain">If this policy is enabled, web developer tools are not available within Firefox.
+      <string id="DisableDeveloperTools_Explain">If this policy is enabled, web developer tools are not available within Cliqz.
 
-If this policy is disabled or not configured, web developer tools are available within Firefox.</string>
+If this policy is disabled or not configured, web developer tools are available within Cliqz.</string>
       <string id="DisableFeedbackCommands">Disable Feedback Commands</string>
       <string id="DisableFeedbackCommands_Explain">If this policy is enabled, the &quot;Submit Feedback&quot; and &quot;Report Deceptive Site&quot; menuitems are not available from the help menu.
 
@@ -126,9 +121,9 @@ For more information, see https://support.mozilla.org/en-US/kb/shield and https:
 
 If this policy is disabled or not configured, the &quot;Forget&quot; button is available.</string>
       <string id="DisableFormHistory">Disable Form History</string>
-      <string id="DisableFormHistory_Explain">If this policy is enabled, Firefox will not remember form or search history.
+      <string id="DisableFormHistory_Explain">If this policy is enabled, Cliqz will not remember form or search history.
 
-If this policy is disabled or not configured, Firefox will remember form and search history.</string>
+If this policy is disabled or not configured, Cliqz will remember form and search history.</string>
       <string id="DisablePocket">Disable Pocket</string>
       <string id="DisablePocket_Explain">If this policy is enabled, Pocket is not available.
 
@@ -142,9 +137,9 @@ If this policy is disabled or not configured, private browsing is allowed.</stri
 
 If this policy is disabled or not configured, the &quot;Import data from another browser&quot; option is available.</string>
       <string id="DisableProfileRefresh">Disable Profile Refresh</string>
-      <string id="DisableProfileRefresh_Explain">If this policy is enabled, the &quot;Refresh Firefox&quot; button is not available on the about:support page or on support.mozilla.org.
+      <string id="DisableProfileRefresh_Explain">If this policy is enabled, the &quot;Refresh Cliqz&quot; button is not available on the about:support page or on support.mozilla.org.
 
-If this policy is disabled or not configured, the &quot;Refresh Firefox&quot; button is available.</string>
+If this policy is disabled or not configured, the &quot;Refresh Cliqz&quot; button is available.</string>
       <string id="DisableSafeMode">Disable Safe Mode</string>
       <string id="DisableSafeMode_Explain">If this policy is enabled, the user cannot restart the browser into safe mode.
 
@@ -176,11 +171,11 @@ If this policy is disabled or not configured, the bookmarks toolbar is not displ
 
 If this policy is disabled or not configured, the menu bar is not displayed by default.</string>
       <string id="DontCheckDefaultBrowser">Don't Check Default Browser</string>
-      <string id="DontCheckDefaultBrowser_Explain">If this policy is enabled, Firefox does not check to see if it is the default browser at startup.
+      <string id="DontCheckDefaultBrowser_Explain">If this policy is enabled, Cliqz does not check to see if it is the default browser at startup.
 
-If this policy is disabled or not configured, Firefox checks to see if it is the default browser at startup.</string>
+If this policy is disabled or not configured, Cliqz checks to see if it is the default browser at startup.</string>
       <string id="Extensions_Install">Extensions to Install</string>
-      <string id="Extensions_Install_Explain">If this policy is enabled, you can specify a list of extension URLs or paths that will be installed when Firefox is started.
+      <string id="Extensions_Install_Explain">If this policy is enabled, you can specify a list of extension URLs or paths that will be installed when Cliqz is started.
 Anytime this list is changed, the extensions will be reinstalled.
 
 If this policy is disabled or not configured, no extensions are installed.</string>
@@ -198,9 +193,9 @@ If this policy is disabled or not configured, no extensions are locked</string>
 
 If this policy is enabled or not configured, hardware acceleration is enabled.</string>
       <string id="OfferToSaveLogins">Offer to save logins</string>
-      <string id="OfferToSaveLogins_Explain">If this policy is enabled or not configured, Firefox will offer to save website logins and passwords.
+      <string id="OfferToSaveLogins_Explain">If this policy is enabled or not configured, Cliqz will offer to save website logins and passwords.
 
-If this policy is disabled, Firefox will not offer to save website logins and passwords.</string>
+If this policy is disabled, Cliqz will not offer to save website logins and passwords.</string>
       <string id="PopupBlocking_Allow_Explain">If this policy is enabled, pop-up windows are always allowed for the origins indicated. If a top level domain is specified (http://example.org), pop-up windows are allowed for all subdomains as well.
 
 If this policy is disabled or not configured, the default pop-up policy is followed.</string>
@@ -236,12 +231,12 @@ This setting is ignored if this policy is disabled or not configured or if cooki
       <string id="Cookies_AcceptThirdParty_All">Always</string>
       <string id="Cookies_AcceptThirdParty_None">Never</string>
       <string id="Cookies_AcceptThirdParty_FromVisited">From visited</string>
-      <string id="Cookies_ExpireAtSessionEnd">Keep cookies until Firefox is closed</string>
-      <string id="Cookies_ExpireAtSessionEnd_Explain">If this policy is enabled and cookies are allowed, they will expire when Firefox is closed.
+      <string id="Cookies_ExpireAtSessionEnd">Keep cookies until Cliqz is closed</string>
+      <string id="Cookies_ExpireAtSessionEnd_Explain">If this policy is enabled and cookies are allowed, they will expire when Cliqz is closed.
 
 This setting is ignored if this policy is disabled or not configured or if cookies are not allowed.</string>
       <string id="Cookies_RejectTracker">Reject trackers</string>
-      <string id="Cookies_RejectTracker_Explain">If this policy is enabled and cookies are allowed, Firefox will reject tracker cookies by default.
+      <string id="Cookies_RejectTracker_Explain">If this policy is enabled and cookies are allowed, Cliqz will reject tracker cookies by default.
 
 This setting is ignored if this policy is disabled or not configured or if cookies are not allowed.</string>
       <string id="Cookies_Locked">Do not allow preferences to be changed</string>
@@ -325,11 +320,11 @@ If this policy is disabled or not configured, the user can change their Flash pr
 
 If this policy is disabled or not configured, the first run page is displayed.</string>
       <string id="OverridePostUpdatePage">Override the upgrade page</string>
-      <string id="OverridePostUpdatePage_Explain">If this policy is enabled, you can specify a URL to be displayed after Firefox is updated. If you leave the URL blank, no upgrade page will be shown.
+      <string id="OverridePostUpdatePage_Explain">If this policy is enabled, you can specify a URL to be displayed after Cliqz is updated. If you leave the URL blank, no upgrade page will be shown.
 
 If this policy is disabled or not configured, the upgrade is displayed.</string>
       <string id="SanitizeOnShutdown">Clear all data when browser is closed</string>
-      <string id="SanitizeOnShutdown_Explain">If this policy is enabled, all data is cleared when Firefox is closed. This includes Browsing &amp; Download History, Cookies, Active Logins, Cache, Form &amp; Search History, Site Preferences and Offline Website Data.
+      <string id="SanitizeOnShutdown_Explain">If this policy is enabled, all data is cleared when Cliqz is closed. This includes Browsing &amp; Download History, Cookies, Active Logins, Cache, Form &amp; Search History, Site Preferences and Offline Website Data.
 
 If this policy is disabled or not configured, data is not cleared when the browser is closed.</string>
       <string id="WebsiteFilter_Block">Blocked websites</string>
@@ -390,7 +385,7 @@ If this policy is disabled or not configured, there are no exceptions to the web
       <string id="Bookmark48">Bookmark 48</string>
       <string id="Bookmark49">Bookmark 49</string>
       <string id="Bookmark50">Bookmark 50</string>
-      <string id="Bookmark_Explain">If this policy is enabled, you can configure a bookmark be added to Firefox.  Due to a bug, you must select the location. Note that you must specify the bookmarks in order.
+      <string id="Bookmark_Explain">If this policy is enabled, you can configure a bookmark be added to Cliqz.  Due to a bug, you must select the location. Note that you must specify the bookmarks in order.
 
 If this policy is disabled or not configured, a new bookmark is not added.</string>
       <string id="BookmarkPlacementToolbar">Toolbar</string>
@@ -401,20 +396,20 @@ If this policy is disabled or not configured, a new bookmark is not added.</stri
 If this policy is disabled or not configured, default bookmarks and Smart Bookmarks (Most Visited, Recent Tags) are created.
 
 Note: this policy is only effective if used before the first run of the profile.</string>
-      <string id="HomepageURL">URL for Home page</string>
-      <string id="HomepageURL_Explain">If this policy is enabled, you can set a default home page. You can also lock the home page.
 
-If this policy is disabled or not configured, the user can set and change the home page.</string>
-      <string id="HomepageAdditional">Additional Homepages</string>
-      <string id="HomepageAdditional_Explain">If this policy is enabled, you can have additional home pages. They are opened in multiple tabs.
+      <string id="HomepageURLs">Set of URL(s) for Home page</string>
+      <string id="HomepageURLs_Explain">If this policy is enabled, you can set one or more URLs as home pages. They are opened in multiple tabs.
 
-If this policy is disabled or not configured, there is only one home page.</string>
-      <string id="HomepageStartPage">Start Page</string>
-      <string id="HomepageStartPage_Explain">If this policy is enabled, you can change what is displayed when Firefox starts. It can be the homepage, the previous session, or a blank page.
+If this policy is disabled or not configured, the user can set and change the home page URL(s).</string>
+      <string id="StartupOptions">Startup Options</string>
+      <string id="StartupOptions_Explain">If this policy is enabled, you can set Startup options for Cliqz starts. Here you can also lock all Startup Options.
 
-If this policy is disabled or not configured, the start page defaults to the previous session.</string>
-      <string id="None">None</string>
-      <string id="Homepage">Homepage</string>
+If this policy is disabled or not configured, the Startup options will be deafult one.</string>
+      <string id="Default">Cliqz Tab (Default)</string>
+      <string id="CustomURLs">Custom URLs...</string>
+      <string id="BlankPage">Blank page</string>
+      <string id="Startup">Startup</string>
+
       <string id="PreviousSession">Previous Session</string>
       <string id="Proxy">Proxy Settings</string>
       <string id="Proxy_Explain">If this policy is enabled, you can configure and lock network settings.
@@ -451,13 +446,13 @@ If this policy is disabled or not configured, no additional PKCS #11 modules wil
       <string id="SearchBar">Search bar location</string>
       <string id="SearchBar_Explain">If this policy is enabled, you can set whether the search bar is separate from the URL bar.
 
-If this policy is disabled or not configured, new users get a unified search bar, users upgrading from Firefox 56 and below get a separate search bar.</string>
+If this policy is disabled or not configured, new users get a unified search bar, users upgrading from Cliqz 1.16 and below get a separate search bar.</string>
       <string id="SearchEngines_1">Search Engine One</string>
       <string id="SearchEngines_2">Search Engine Two</string>
       <string id="SearchEngines_3">Search Engine Three</string>
       <string id="SearchEngines_4">Search Engine Four</string>
       <string id="SearchEngines_5">Search Engine Five</string>
-      <string id="SearchEngines_Explain">If this policy is enabled, you can configure a search engine to be added to Firefox. Use {searchTerms} to indicate where the search term is placed. Due to a bug, you must select the method (usually GET). Note that you must specify the search engines in order.
+      <string id="SearchEngines_Explain">If this policy is enabled, you can configure a search engine to be added to Cliqz. Use {searchTerms} to indicate where the search term is placed. Due to a bug, you must select the method (usually GET). Note that you must specify the search engines in order.
 
 If this policy is disabled or not configured, a new search engine is not added.</string>
       <string id="SearchBar_Unified">Unified</string>
@@ -467,7 +462,7 @@ If this policy is disabled or not configured, a new search engine is not added.<
       <string id="SearchEngines_Default">Default Search Engine</string>
       <string id="SearchEngines_Default_Explain">If this policy is enabled, you can set the name of a search engine to be used as the default.
 
-If this policy is disabled or not configured, the Firefox default engine is used.</string>
+If this policy is disabled or not configured, the Cliqz default engine is used.</string>
       <string id="SearchEngines_PreventInstalls">Prevent Search Engine Installs</string>
       <string id="SearchEngines_PreventInstalls_Explain">If this policy is enabled, the user cannot install search engines from web page.
 
@@ -477,13 +472,13 @@ If this policy is disabled or not configured, search engines can be installed fr
 
 If this policy is disabled or not configured, search engines will not be removed or hidden.</string>
       <string id="SSLVersionMin">Minimum SSL version enabled</string>
-      <string id="SSLVersionMin_Explain">If this policy is enabled, Firefox will not use SSL/TLS versions less than the value specified.
+      <string id="SSLVersionMin_Explain">If this policy is enabled, Cliqz will not use SSL/TLS versions less than the value specified.
 
-If this policy is disabled or not configured, Firefox defaults to a minimum of TLS 1.0.</string>
+If this policy is disabled or not configured, Cliqz defaults to a minimum of TLS 1.0.</string>
       <string id="SSLVersionMax">Maximum SSL version enabled</string>
-      <string id="SSLVersionMax_Explain">If this policy is enabled, Firefox will not use SSL/TLS versions greater than the value specified.
+      <string id="SSLVersionMax_Explain">If this policy is enabled, Cliqz will not use SSL/TLS versions greater than the value specified.
 
-If this policy is disabled or not configured, Firefox defaults to a maximum of TLS 1.3.</string>
+If this policy is disabled or not configured, Cliqz defaults to a maximum of TLS 1.3.</string>
       <string id="TLS1">TLS 1.0</string>
       <string id="TLS1_1">TLS 1.1</string>
       <string id="TLS1_2">TLS 1.2</string>
@@ -533,18 +528,14 @@ If this policy is disabled or not configured, Firefox defaults to a maximum of T
           <label>URL:</label>
         </textBox>
       </presentation>
-      <presentation id="HomepageURL">
-        <text>URL:</text>
-        <textBox refId="HomepageURL">
-          <label/>
-        </textBox>
-        <checkBox refId="HomepageLocked">Don't allow the homepage to be changed.</checkBox>
+      <presentation id="HomepageURLs">
+        <listBox refId="HomepageURLs">Set of URL(s) for home page(s).</listBox>
       </presentation>
-      <presentation id="HomepageAdditional">
-        <listBox refId="HomepageAdditional">Additional homepages</listBox>
-      </presentation>
-      <presentation id="StartPage">
-        <dropdownList refId="StartPage"/>
+      <presentation id="StartupOptions">
+        <checkBox refId="RestoreLastSession">Show your windows and tabs from last time.</checkBox>
+        <checkBox refId="ShowHomepage">Show home page.</checkBox>
+        <checkBox refId="StartupLocked">Don't allow the homepage to be changed.</checkBox>
+        <dropdownList refId="Homepage"/>
       </presentation>
       <presentation id="Bookmark">
         <text>Title:</text>

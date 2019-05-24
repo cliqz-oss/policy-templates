@@ -1,6 +1,8 @@
-**IMPORTANT**: This file is in active development along with the policies in Firefox. To get the policy information that corresponds to a specific release, go to https://github.com/mozilla/policy-templates/releases.
+**IMPORTANT**: This is clone of Firefox's solution for Entreprise. Cliqz desktop browser have some changes on top of Firefox's policies. This document mostly copy of Firefox solution with changes related to Cliqz desktop browser. This is experimental now in Cliqz browser, please, create an issue if something doesn't work for you.
 
-Policies can be specified using the Group Policy templates on Windows (https://github.com/mozilla/policy-templates/tree/master/windows), configuration profiles on macOS (https://github.com/mozilla/policy-templates/tree/master/mac), or by creating a file called `policies.json`. On Windows, create a directory called `distribution` where the EXE is located and place the file there. On Mac, the file goes into `Firefox.app/Contents/Resources/distribution`.  On Linux, the file goes into `firefox/distribution`, where `firefox` is the installation directory for firefox, which varies by distribution.
+You can find releases compatible with Cliqz browser here: https://github.com/cliqz-oss/policy-templates/releases.
+
+Policies can be specified using the Group Policy templates on Windows (https://github.com/cliqz-oss/policy-templates/tree/master/windows), configuration profiles on macOS (https://github.com/cliqz-oss/policy-templates/tree/master/mac), or by creating a file called `policies.json`. On Windows, create a directory called `distribution` where the EXE is located and place the file there. On Mac, the file goes into `Cliqz.app/Contents/Resources/distribution`.  On Linux, the file goes into `cliqz/distribution`, where `cliqz` is the installation directory for cliqz, which varies by distribution.
 
 The content of the JSON file should look like this:
 ```
@@ -10,7 +12,7 @@ The content of the JSON file should look like this:
   }
 }
 ```
-Policies are documented below.   
+Policies are documented below.
 
 
 **Note**: though comments are used in this readme file for documentation, comments are not valid in actual JSON files. Remove all comments before attempting to deploy.
@@ -22,7 +24,6 @@ This policy is for changing the URL used for application update
   "AppUpdateURL": "http://yoursite.com"
 }
 ```
-
 
 ### Authentication
 This policy is for configuring sites that support integrated authentication. See https://developer.mozilla.org/en-US/docs/Mozilla/Integrated_authentication for more information.
@@ -98,28 +99,28 @@ same folder name are grouped together.
 ### Certificates
 This policy can be used to install certificates or to read certificates from the system certificate store on Mac and Windows.
 
-The ImportEnterpriseRoots key will cause Firefox to import from the system certificate store.
+The ImportEnterpriseRoots key will cause Cliqz to import from the system certificate store.
 
-The Install Certificates key by default will search for certificates in the locations listed below. 
-Starting in Firefox 65 you can specify a fully qualified path including UNC. (See cert3.der and cert4.pem, in example).
+The Install Certificates key by default will search for certificates in the locations listed below.
+Starting in Cliqz 1.27.0 you can specify a fully qualified path including UNC. (See cert3.der and cert4.pem, in example).
 
 **Be advised if you wish to load a certificate from a UNC path you must use double backslahes.**
 Example: \\SERVER\\CERTS\CERT5.PEM
 
 
-If Firefox does not find something at your fully qualified path, it will search the default directories.
+If Cliqz does not find something at your fully qualified path, it will search the default directories.
 
 Certificates can be located in the following locations:
 - Windows
-  - %USERPROFILE%\AppData\Local\Mozilla\Certificates
-  - %USERPROFILE%\AppData\Roaming\Mozilla\Certificates
+  - %USERPROFILE%\AppData\Local\Cliqz\Certificates
+  - %USERPROFILE%\AppData\Roaming\Cliqz\Certificates
 - macOS
-  - /Library/Application Support/Mozilla/Certificates
-  - ~/Library/Application Support/Mozilla/Certificates
+  - /Library/Application Support/Cliqz/Certificates
+  - ~/Library/Application Support/Cliqz/Certificates
 - Linux
-  - /usr/lib/mozilla/certificates
-  - /usr/lib64/mozilla/certificates
-  - ~/.mozilla/certificates
+  - /usr/lib/cliqz/certificates
+  - /usr/lib64/cliqz/certificates
+  - ~/.cliqz/certificates
 
 
 ```
@@ -216,33 +217,6 @@ This policy disables the menus for reporting sites (Submit Feedback, Report Dece
   }
 }
 ```
-### DisableFirefoxScreenshots
-This policy removes access to Firefox Screenshots.
-```
-{
-  "policies": {
-    "DisableFirefoxScreenshots": true
-  }
-}
-```
-### DisableFirefoxAccounts
-This policy disables Sync.
-```
-{
-  "policies": {
-    "DisableFirefoxAccounts": true
-  }
-}
-```
-### DisableFirefoxStudies
-This policy disables Firefox studies (Shield).
-```
-{
-  "policies": {
-    "DisableFirefoxStudies": true
-  }
-}
-```
 ### DisableForgetButton
 This policy disables the "Forget" button.
 ```
@@ -258,15 +232,6 @@ This policy turns off the browser.formfill.enable preferences.
 {
   "policies": {
     "DisableFormHistory": true
-  }
-}
-```
-### DisablePocket
-This policy turns off Pocket.
-```
-{
-  "policies": {
-    "DisablePocket": true
   }
 }
 ```
@@ -289,7 +254,7 @@ This policy disables the "Import data from another browser" option in the bookma
 }
 ```
 ### DisableProfileRefresh
-This policy disables the Refresh Firefox button on about:support and support.mozilla.org.
+This policy disables the Refresh Cliqz button on about:support.
 ```
 {
   "policies": {
@@ -357,31 +322,12 @@ This policy turns on the menubar by default. A user can still turn it off, and i
 }
 ```
 ### DontCheckDefaultBrowser
-This policy stops Firefox from checking if it is the default browser at startup.
+This policy stops Cliqz from checking if it is the default browser at startup.
 ```
 {
   "policies": {
     "DontCheckDefaultBrowser": true
   }
-}
-```
-### EnableTrackingProtection
-This policy affects tracking protection.
-
-If this policy is not configured, tracking protection is not enabled by default in the browser, but it is enabled by default in private browsing and the user can change it.
-
-If Value is set to false, tracking protection is disabled and locked in both the regular browser and private browsing.
-
-If Value is set to true, tracking protection is enabled by default in both the regular browser and private browsing.
-
-You can choose to set the Locked value if you want to prevent the user from changing it.
-```
-{
-  "policies": {
-    "EnableTrackingProtection": {
-      "Value": [true, false],
-      "Locked": [true, false]
-    }
 }
 ```
 ### Extensions
@@ -418,7 +364,7 @@ This policy prevents the default bookmarks or the Smart Bookmarks (Most Visited,
 }
 ```
 ### OfferToSaveLogins
-This policy sets the signon.rememberSignons preference. It determines whether or not Firefox offers to save passwords. It can either be enabled or disabled.
+This policy sets the signon.rememberSignons preference. It determines whether or not Cliqz offers to save passwords. It can either be enabled or disabled.
 ```
 {
   "policies": {
@@ -426,17 +372,18 @@ This policy sets the signon.rememberSignons preference. It determines whether or
   }
 }
 ```
-### Homepage
-This policy sets the default homepage value and the default start page.  It can also be used to lock the homepage or add additional homepages.
+### Startup
+This policy sets the default startup options value: default start pages, restore session, etc. It can also be used to lock the startup options.
 ```
 {
   "policies": {
-    "Homepage": {
-      "URL": "http://example.com/",
+    "Startup": {
+      "RestoreLastSession": false,
+      "ShowHomepage": true,
       "Locked": true,
-      "Additional": ["http://example.org/",
-                     "http://example.edu/"],
-      "StartPage": ["none", "homepage", "previous-session"]
+      "URLs": ["http://example.org/",
+               "http://example.edu/"],
+      "Homepage": ["default", "urls", "blank"]
     }
   }
 }
@@ -535,7 +482,7 @@ This policy allows you to change the permissions associated with camera, microph
 }
 ```
 ### Proxy
-This policy allows you to specify proxy settings. These settings correspond to the connection settings in Firefox preferences.
+This policy allows you to specify proxy settings. These settings correspond to the connection settings in Cliqz preferences.
 To specify ports, append them to the hostnames with a colon (:). If Locked is set to true, the values can't be changed by the user.
 ```
 {
@@ -557,30 +504,12 @@ To specify ports, append them to the hostnames with a colon (:). If Locked is se
   }
 }
 ```
-### RequestedLocales
-This policy sets the list of requested locales for the application in order of preference. It will cause the corresponding language pack to become active.
-```
-{
-  "policies": {
-    "RequestedLocales": ["de", "en-US"]
-  }
-}
-```
 ### SanitizeOnShutdown
-If this policy is set to true,  all data is cleared when Firefox is closed. This includes Browsing & Download History, Cookies, Active Logins, Cache, Form & Search History, Site Preferences and Offline Website Data.
+If this policy is set to true, all data is cleared when Cliqz is closed. This includes Browsing & Download History, Cookies, Active Logins, Cache, Form & Search History, Site Preferences and Offline Website Data.
 ```
 {
   "policies": {
     "SanitizeOnShutdown": [true|false]
-  }
-}
-```
-### SearchBar
-This policy can be used to determine if the search bar is separate or combined with the URL bar.
-```
-{
-  "policies": {
-    "SearchBar": ["unified", "separate"]
   }
 }
 ```
@@ -592,30 +521,6 @@ This policy blocks websites from being visited. The parameters take an array of 
     "WebsiteFilter": {
       "Block": ["<all_urls>"],
       "Exceptions": ["http://example.org/*"]
-    }
-  }
-}
-```
-### Search Engines (This policy is only available on the ESR.)
-This policy allows you to add new search engines, remove or hide search engines, as well as set the default and prevent the install of search engines from web pages. Only Name and URLTemplate is required.
-```
-{
-  "policies": {
-    "SearchEngines": {
-      "Add": [
-        {
-          "Name": "",
-          "URLTemplate": "URL including {searchTerms} to substitute for the terms",
-          "Method": ["GET", "POST"],
-          "IconURL": "URL to icon",
-          "Alias": "Alias that can be used to access the engine",
-          "Description": "Description",
-          "SuggestURLTemplate": "URL for suggestions using {searchTerms}"
-        }
-      ],
-      "Default": "Name of engine",
-      "PreventInstalls": [true|false],
-      "Remove": ["Twitter", "Wikipedia (en)"]
     }
   }
 }

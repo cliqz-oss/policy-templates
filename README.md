@@ -2,7 +2,7 @@
 
 You can find releases compatible with Cliqz browser here: https://github.com/cliqz-oss/policy-templates/releases.
 
-Policies can be specified using the Group Policy templates on Windows (https://github.com/cliqz-oss/policy-templates/tree/master/windows), configuration profiles on macOS (https://github.com/cliqz-oss/policy-templates/tree/master/mac), or by creating a file called `policies.json`. On Windows, create a directory called `distribution` where the EXE is located and place the file there. On Mac, the file goes into `Cliqz.app/Contents/Resources/distribution`.  On Linux, the file goes into `cliqz/distribution`, where `cliqz` is the installation directory for cliqz, which varies by distribution.
+Policies can be specified using the Group Policy templates on Windows (https://github.com/cliqz-oss/policy-templates/tree/master/windows) or by creating a file called `policies.json`. On Windows, create a directory called `distribution` where the EXE is located and place the file there. On Mac, the file goes into `Cliqz.app/Contents/Resources/distribution`.  On Linux, the file goes into `cliqz/distribution`, where `cliqz` is the installation directory for cliqz, which varies by distribution.
 
 The content of the JSON file should look like this:
 ```

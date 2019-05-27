@@ -528,14 +528,12 @@ If this policy is disabled or not configured, Cliqz defaults to a maximum of TLS
           <label>URL:</label>
         </textBox>
       </presentation>
-      <presentation id="HomepageURLs">
-        <listBox refId="HomepageURLs">Set of URL(s) for home page(s).</listBox>
-      </presentation>
       <presentation id="StartupOptions">
         <checkBox refId="RestoreLastSession">Show your windows and tabs from last time.</checkBox>
         <checkBox refId="ShowHomepage">Show home page.</checkBox>
         <checkBox refId="StartupLocked">Don't allow the homepage to be changed.</checkBox>
         <dropdownList refId="Homepage"/>
+        <listBox refId="HomepageURLs">Set of URL(s) for home page(s):</listBox>
       </presentation>
       <presentation id="Bookmark">
         <text>Title:</text>

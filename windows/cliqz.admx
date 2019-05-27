@@ -742,13 +742,6 @@
         <decimal value="0"/>
       </disabledValue>
     </policy>
-    <policy name="HomepageURLs" class="Both" displayName="$(string.HomepageURLs)" explainText="$(string.HomepageURLs_Explain)" key="Software\Policies\Cliqz\Startup" presentation="$(presentation.HomepageURLs)" >
-      <parentCategory ref="Startup" />
-      <supportedOn ref="SUPPORTED_CLIQZ_127" />
-      <elements >
-        <list id="HomepageURLs" key="Software\Policies\Cliqz\Startup\URLs" valuePrefix=""/>
-      </elements>
-    </policy>
     <policy name="StartupOptions" class="Both" displayName="$(string.StartupOptions)" explainText="$(string.StartupOptions_Explain)" key="Software\Policies\Cliqz\Startup" presentation="$(presentation.StartupOptions)" >
       <parentCategory ref="Startup" />
       <supportedOn ref="SUPPORTED_CLIQZ_127" />
@@ -794,6 +787,7 @@
             </value>
           </item>
         </enum>
+        <list id="HomepageURLs" key="Software\Policies\Cliqz\Startup\URLs" valuePrefix=""/>
       </elements>
     </policy>
     <policy name="Bookmark01" class="Both" displayName="$(string.Bookmark01)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Cliqz\Bookmarks\1" presentation="$(presentation.Bookmark)" >

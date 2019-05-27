@@ -527,14 +527,12 @@ If this policy is disabled or not configured, Firefox defaults to a maximum of T
           <label>URL:</label>
         </textBox>
       </presentation>
-      <presentation id="HomepageURLs">
-        <listBox refId="HomepageURLs">Set of URL(s) for home page(s).</listBox>
-      </presentation>
       <presentation id="StartupOptions">
         <checkBox refId="RestoreLastSession">Fenster und Tabs der letzten Sitzung anzeigen.</checkBox>
         <checkBox refId="ShowHomepage">Startseite anzeigen.</checkBox>
         <checkBox refId="StartupLocked">Änderung der Startseite nicht erlauben.</checkBox>
         <dropdownList refId="Homepage"/>
+        <listBox refId="HomepageURLs">Festgelegte URL(s) für die Startseite:</listBox>
       </presentation>
       <presentation id="Bookmark">
         <text>Titel:</text>

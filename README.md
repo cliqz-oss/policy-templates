@@ -75,6 +75,7 @@ This policy removes access to about:support.
 {
   "policies": {
     "BlockAboutSupport": true
+  }
 }
 ```
 ### Bookmarks

@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<policyDefinitionResources revision="1.4" schemaVersion="1.0" >
+<policyDefinitionResources revision="1.5" schemaVersion="1.0" >
   <displayName/>
   <description/>
   <resources >
     <stringTable >
       <string id="SUPPORTED_WINXPSP2">Microsoft Windows XP SP2 or later</string>
-      <string id="SUPPORTED_CLIQZ_127">Cliqz 1.27 or later</string>
+      <string id="SUPPORTED_CLIQZ_127">Cliqz 1.27.0 or later</string>
+      <string id="SUPPORTED_CLIQZ_128">Cliqz 1.28.2 or later</string>
+      <string id="SUPPORTED_CLIQZ_129">Cliqz 1.29.0 or later</string>
       <string id="cliqz">Cliqz</string>
       <string id="Permissions_group">Permissions</string>
       <string id="Camera_group">Camera</string>
@@ -22,6 +24,7 @@
       <string id="Flash_group">Flash</string>
       <string id="Startup_group">Startup</string>
       <string id="Search_group">Search</string>
+      <string id="Preferences_group">Preferences</string>
       <string id="Allow">Allowed Sites</string>
       <string id="Block">Blocked Sites</string>
       <string id="AppUpdateURL">Custom Update URL</string>
@@ -70,6 +73,10 @@ If this policy is disabled or not configured, the user can access Troubleshootin
       <string id="DisableSetDesktopBackground_Explain">If this policy is enabled, the user cannot set an image as their desktop background.
 
 If this policy is disabled or not configured, users can set images as their desktop background.</string>
+      <string id="CaptivePortal">Captive Portal</string>
+      <string id="CaptivePortal_Explain">If this policy is disabled, captive portal support is disabled.
+
+If this policy is enabled or not configured, captive portal support is enabled.</string>
       <string id="Certificates_ImportEnterpriseRoots">Import Enterprise Roots</string>
       <string id="Certificates_ImportEnterpriseRoots_Explain">If this policy is enabled, Cliqz will read certificates from the Windows certificate store.
 
@@ -78,6 +85,14 @@ If this policy is disabled or not configured, Cliqz will not read certificates f
       <string id="Certificates_Install_Explain">If this policy is enabled, Cliqz will install the listed certificates into Cliqz. It will look in %USERPROFILE%\AppData\Local\Cliqz\Certificates and %USERPROFILE%\AppData\Roaming\Cliqz\Certificates.
 
 If this policy is disabled or not configured, Cliqz will not install additional certificates.</string>
+      <string id="DefaultDownloadDirectory">Default Download Directory</string>
+      <string id="DefaultDownloadDirectory_Explain">If this policy is enabled, you can set the default directory for downloads. ${home} can be used for the native home path.
+
+If this policy is disabled or not configured, the default Cliqz download directory is used.</string>
+      <string id="DownloadDirectory">Download Directory</string>
+      <string id="DownloadDirectory_Explain">If this policy is enabled, you can set and lock the directory for downloads. ${home} can be used for the native home path.
+
+If this policy is disabled or not configured, the default Cliqz download directory is used and the user can change it.</string>
       <string id="DNSOverHTTPS">Configure DNS Over HTTPS</string>
       <string id="DNSOverHTTPS_Explain">If this policy is enabled, the default configuration for DNS over HTTPS can be changed.
 
@@ -188,10 +203,32 @@ If this policy is disabled or not configured, no extensions are uninstalled.</st
       <string id="Extensions_Locked_Explain">If this policy is enabled, you can specify a list of extension IDs that the user will be unable to uninstall or disable.
 
 If this policy is disabled or not configured, no extensions are locked</string>
+      <string id="ExtensionUpdate">Extension Update</string>
+      <string id="ExtensionUpdate_Explain">If this policy is disabled, extensions will not be updated automatically.
+
+If this policy is enabled or not configured, extensions will be updated automatically.</string>
+      <string id="ExtensionSettings">Extension Management</string>
+      <string id="ExtensionSettings_Explain">If this policy is enabled, you can use JSON to describe the extension management policy.
+
+If this policy is disabled or not configured, extensions will not be managed.
+
+For detailed information on creating the policy, see https://github.com/mozilla/policy-templates/blob/master/README.md#extensionsettings.</string>
       <string id="HardwareAcceleration">Hardware Acceleration</string>
       <string id="HardwareAcceleration_Explain">If this policy is disabled, hardware acceleration and cannot be enabled.
 
 If this policy is enabled or not configured, hardware acceleration is enabled.</string>
+      <string id="LocalFileLinks">Local File Links</string>
+      <string id="LocalFileLinks_Explain">If this policy is enabled, you can specify origins where linking to local files is allowed.
+
+If this policy is disabled or not configured, websites can't link to local files.</string>
+      <string id="NetworkPrediction">Network Prediction</string>
+      <string id="NetworkPrediction_Explain">If this policy is disabled, network prediction (DNS prefetching) will be disabled.
+
+If this policy is enabled or not configured, network prediction (DNS prefetching) will be enabled.</string>
+      <string id="NewTabPage">New Tab Page</string>
+      <string id="NewTabPage_Explain">If this policy is disabled, the new tab page will be blank.
+
+If this policy is enabled or not configured, the new tab page will be the default.</string>
       <string id="OfferToSaveLogins">Offer to save logins</string>
       <string id="OfferToSaveLogins_Explain">If this policy is enabled or not configured, Cliqz will offer to save website logins and passwords.
 
@@ -299,6 +336,10 @@ If this policy is disabled or not configured, any site that is not in the Block 
       <string id="Notifications_Locked_Explain">If this policy is enabled, notification preferences cannot be changed by the user.
 
 If this policy is disabled or not configured, the user can change their notification preferences.</string>
+      <string id="FirefoxHome">Customize Firefox Home</string>
+      <string id="FirefoxHome_Explain">If this policy is enabled, you can choose the sections displayed on Firefox Home and prevent the user from changing them.
+
+If this policy is disabled or not configured, the default sections are displayed and the user can change them.</string>
       <string id="FlashPlugin_Allow_Explain">If this policy is enabled, Flash is activated by default for the origins indicated unless Flash is completely disabled. If a top level domain is specified (http://example.org), Flash is allowed for all subdomains as well.
 
 If this policy is disabled or not configured, the default Flash policy is followed.</string>
@@ -323,8 +364,8 @@ If this policy is disabled or not configured, the first run page is displayed.</
       <string id="OverridePostUpdatePage_Explain">If this policy is enabled, you can specify a URL to be displayed after Cliqz is updated. If you leave the URL blank, no upgrade page will be shown.
 
 If this policy is disabled or not configured, the upgrade is displayed.</string>
-      <string id="SanitizeOnShutdown">Clear all data when browser is closed</string>
-      <string id="SanitizeOnShutdown_Explain">If this policy is enabled, all data is cleared when Cliqz is closed. This includes Browsing &amp; Download History, Cookies, Active Logins, Cache, Form &amp; Search History, Site Preferences and Offline Website Data.
+      <string id="SanitizeOnShutdown">Clear data when browser is closed</string>
+      <string id="SanitizeOnShutdown_Explain">If this policy is enabled, you can choose data to be cleared when Cliqz is closed.
 
 If this policy is disabled or not configured, data is not cleared when the browser is closed.</string>
       <string id="WebsiteFilter_Block">Blocked websites</string>
@@ -411,6 +452,12 @@ If this policy is disabled or not configured, the Startup options will be deaful
       <string id="Startup">Startup</string>
 
       <string id="PreviousSession">Previous Session</string>
+      <string id="PromptForDownloadLocation">Prompt for download location</string>
+      <string id="PromptForDownloadLocation_Explain">If this policy is disabled, the user is not prompted for a download location.
+
+If this policy is enabled, the user is always prompted for a download location.
+
+If this policy is not configured, the user is prompted for a download location, but can change the default.</string>
       <string id="Proxy">Proxy Settings</string>
       <string id="Proxy_Explain">If this policy is enabled, you can configure and lock network settings.
 
@@ -436,6 +483,7 @@ If this policy is disabled, tracking protection is disabled and locked in both t
 
 If this policy is enabled, private browsing is enabled by default in both the browser and private browsing and you can choose whether or not to prevent the user from changing it.</string>
       <string id="RequestedLocales">Requested locale</string>
+      <string id="RequestedLocalesString">Requested locale (string)</string>
       <string id="RequestedLocales_Explain">If this policy is enabled, you can specify a list of requested locales for the application in order of preference. It will cause the corresponding language pack to become active.
 
 If this policy is disabled or not configured, the application will use the default locale.</string>
@@ -471,6 +519,12 @@ If this policy is disabled or not configured, search engines can be installed fr
       <string id="SearchEngines_Remove_Explain">If this policy is enabled, you can specify the names of engines to be removed or hidden.
 
 If this policy is disabled or not configured, search engines will not be removed or hidden.</string>
+      <string id="SearchSuggestEnabled">Search Suggestions</string>
+      <string id="SearchSuggestEnabled_Explain">If this policy is disabled, search suggestions will be disabled.
+
+If this policy is enabled, search suggestions will be enabled.
+
+If this policy is not configured, search suggestions will be enabled, but the user can turn them off.</string>
       <string id="SSLVersionMin">Minimum SSL version enabled</string>
       <string id="SSLVersionMin_Explain">If this policy is enabled, Cliqz will not use SSL/TLS versions less than the value specified.
 
@@ -483,6 +537,39 @@ If this policy is disabled or not configured, Cliqz defaults to a maximum of TLS
       <string id="TLS1_1">TLS 1.1</string>
       <string id="TLS1_2">TLS 1.2</string>
       <string id="TLS1_3">TLS 1.3</string>
+      <string id="SupportMenu">Support Menu</string>
+      <string id="SupportMenu_Explain">If this policy is enabled, a new menuitem is added to the help menu with support information.
+
+If this policy is disabled or not configured, no menuitem is added.</string>
+      <string id="Preferences_Boolean_Explain">If this policy is enabled, the preference is locked to true. If this policy is disabled, the preference is locked to false.</string>
+      <string id="Preferences_String_Explain">If this policy is enabled, the preference is locked to the string entered. If this policy is disabled, it has no effect.</string>
+      <string id="Preferences_Enum_Explain">If this policy is enabled, the preference is locked to the value selected. If this policy is disabled, it has no effect.</string>
+      <string id="Preferences_security_default_personal_cert_Ask_Every_Time">Ask Every Time</string>
+      <string id="Preferences_security_default_personal_cert_Select_Automatically">Select Automatically</string>
+      <string id="app_update_auto">app.update.auto</string>
+      <string id="browser_cache_disk_enable">browser.cache.disk.enable</string>
+      <string id="browser_fixup_dns_first_for_single_words">browser.fixup.dns_first_for_single_words</string>
+      <string id="browser_search_update">browser.search.update</string>
+      <string id="browser_tabs_warnOnClose">browser.tabs.warnOnClose</string>
+      <string id="browser_cache_disk_parent_directory">browser.cache.disk.parent_directory</string>
+      <string id="browser_urlbar_suggest_bookmark">browser.urlbar.suggest.bookmark</string>
+      <string id="browser_urlbar_suggest_history">browser.urlbar.suggest.history</string>
+      <string id="browser_urlbar_suggest_openpage">browser.urlbar.suggest.openpage</string>
+      <string id="datareporting_policy_dataSubmissionPolicyBypassNotification">datareporting.policy.dataSubmissionPolicyBypassNotification</string>
+      <string id="dom_disable_window_flip">browser.dom.disable_window_flip</string>
+      <string id="dom_disable_window_move_resize">dom.disable_window_move_resize</string>
+      <string id="dom_event_contextmenu_enabled">dom.event.contextmenu.enabled</string>
+      <string id="dom_keyboardevent_keypress_hack_dispatch_non_printable_keys_addl">dom.keyboardevent.keypress.hack.dispatch_non_printable_keys.addl</string>
+      <string id="dom_keyboardevent_keypress_hack_use_legacy_keycode_and_charcode_addl">dom.keyboardevent.keypress.hack.use_legacy_keycode_and_charcode.addl</string>
+      <string id="extensions_getAddons_showPane">extensions.getAddons.showPane</string>
+      <string id="media_gmp-gmpopenh264_enabled">media.gmp-gmpopenh264.enabled</string>
+      <string id="media_gmp-widevinecdm_enabled">media.gmp-widevinecdm.enabled</string>
+      <string id="network_dns_disableIPv6">network.dns.disableIPv6</string>
+      <string id="network_IDN_show_punycode">network.IDN_show_punycode</string>
+      <string id="places_history_enabled">places.history.enabled</string>
+      <string id="security_default_personal_cert">security.default_personal_cert</string>
+      <string id="security_ssl_errorReporting_enabled">security.ssl.errorReporting.enabled</string>
+      <string id="ui_key_menuAccessKeyFocuses">ui.key.menuAccessKeyFocuses</string>
     </stringTable>
     <presentationTable>
       <presentation id="AppUpdateURL">
@@ -576,6 +663,9 @@ If this policy is disabled or not configured, Cliqz defaults to a maximum of TLS
         <textBox refId="SearchEngine_SuggestURLTemplate">
           <label>Suggest URL Template:</label>
         </textBox>
+        <textBox refId="SearchEngine_PostData">
+          <label>POST data:</label>
+        </textBox>
       </presentation>
       <presentation id="SearchEngines_Default">
         <textBox refId="SearchEngines_Default">
@@ -630,6 +720,52 @@ If this policy is disabled or not configured, Cliqz defaults to a maximum of TLS
       </presentation>
       <presentation id="SSLVersion">
         <dropdownList refId="SSLVersion"/>
+      </presentation>
+      <presentation id="SupportMenu">
+        <text>Title:</text>
+        <textBox refId="SupportMenuTitle">
+          <label/>
+        </textBox>
+        <text>URL:</text>
+        <textBox refId="SupportMenuURL">
+          <label/>
+        </textBox>
+        <text>Access key:</text>
+        <textBox refId="SupportMenuAccessKey">
+          <label/>
+        </textBox>
+      </presentation>
+      <presentation id="Preferences_String">
+        <textBox refId="Preferences_String">
+          <label/>
+        </textBox>
+      </presentation>
+      <presentation id="Preferences_security_default_personal_cert">
+        <dropdownList refId="Preferences_security_default_personal_cert"/>
+      </presentation>
+      <presentation id="LocalFileLinks">
+        <listBox refId="LocalFileLinks"/>
+      </presentation>
+      <presentation id="SanitizeOnShutdown">
+        <checkBox refId="SanitizeOnShutdown_Cache">Cache</checkBox>
+        <checkBox refId="SanitizeOnShutdown_Cookies">Cookies</checkBox>
+        <checkBox refId="SanitizeOnShutdown_Downloads">Download History</checkBox>
+        <checkBox refId="SanitizeOnShutdown_FormData">Form &amp; Search History</checkBox>
+        <checkBox refId="SanitizeOnShutdown_History">Browsing History</checkBox>
+        <checkBox refId="SanitizeOnShutdown_Sessions">Active Logins</checkBox>
+        <checkBox refId="SanitizeOnShutdown_SiteSettings">Site Preferences</checkBox>
+        <checkBox refId="SanitizeOnShutdown_OfflineApps">Offline Website Data</checkBox>
+      </presentation>
+      <presentation id="FirefoxHome">
+        <checkBox refId="FirefoxHome_Search">Search</checkBox>
+        <checkBox refId="FirefoxHome_TopSites">Top Sites</checkBox>
+        <checkBox refId="FirefoxHome_Highlights">Download History</checkBox>
+        <checkBox refId="FirefoxHome_Pocket">Recommended by Pocket</checkBox>
+        <checkBox refId="FirefoxHome_Snippets">Snippets</checkBox>
+        <checkBox refId="FirefoxHome_Locked">Don't allow settings to be changed</checkBox>
+      </presentation>
+      <presentation id="ExtensionSettings">
+        <multiTextBox refId="ExtensionSettings"/>
       </presentation>
     </presentationTable>
   </resources>

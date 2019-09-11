@@ -59,13 +59,7 @@ Policies can be specified using the Group Policy templates on Windows (https://g
 | **[`Proxy`](#proxy)** | Configure proxy settings.
 | **[`SanitizeOnShutdown` (All)](#sanitizeonshutdown-all)** | Clear all data on shutdown.
 | **[`SanitizeOnShutdown` (Selective)](#sanitizeonshutdown-selective)** | Clear data on shutdown.
-| **[`SearchEngines`](#searchengines-this-policy-is-only-available-on-the-esr)** |
-| **[`SearchEngines -> Default`](#searchengines--default)** | Set the default search engine.
-| **[`SearchEngines -> PreventInstalls`](#searchengines--preventinstalls)** | Prevent installing search engines from webpages.
-| **[`SearchEngines -> Remove`](#searchengines--remove)** | Hide built-in search engines.
-| **[`SearchEngines -> Add`](#searchengines--add)** | Add new search engines.
 | **[`SecurityDevices`](#securitydevices)** | Install PKCS #11 modules.
-| **[`SearchSuggestEnabled`](#searchsuggestenabled)** | Enable search suggestions.
 | **[`SSLVersionMax`](#sslversionmax)** | Set and lock the maximum version of TLS.
 | **[`SSLVersionMin`](#sslversionmin)** | Set and lock the minimum version of TLS.
 | **[`Startup`](#startup)** | Configure how Cliqz starts.
@@ -1366,62 +1360,6 @@ Software\Policies\Cliqz\HardwareAcceleration = 0x1 | 0x0
   }
 }
 ```
-### Homepage
-Configure the default homepage and how Firefox starts.
-
-`URL` is the default homepage.
-
-`Locked` prevents the user from changing homepage preferences.
-
-`Additional` allows for more than one homepage.
-
-`StartPage` is how Firefox starts. The choices are no homepage, the default homepage or the previous session.
-
-**Compatibility:** Firefox 60, Firefox ESR 60 (StartPage was added in Firefox 60, Firefox ESR 60.4)\
-**CCK2 Equivalent:** `homePage`,`lockHomePage`\
-**Preferences Affected:** `browser.startup.homepage`,`browser.startup.page`
-
-#### Windows
-```
-Software\Policies\Cliqz\Homepage\URL = "https://example.com"
-Software\Policies\Cliqz\Homepage\Locked = 0x1 | 0x0
-Software\Policies\Cliqz\Homepage\Additional\1 = "https://example.org"
-Software\Policies\Cliqz\Homepage\Additional\2 = "https://example.edu"
-Software\Policies\Cliqz\Homepage\StartPage = "none" | "homepage" |  "previous-session"
-```
-#### macOS
-```
-<dict>
-  <key>Homepage</key>
-  <dict>
-    <key>URL</key>
-    <string>http://example.com</string>
-    <key>Locked</key>
-    <true/> | <false/>
-    <key>Additional</key>
-    <array>
-      <string>http://example.org</string>
-      <string>http://example.edu</string>
-    </array>
-    <key>StartPage</key>
-    <string>always | never | from-visited</string>
-  </dict>
-</dict>
-```
-#### JSON
-```
-{
-  "policies": {
-    "Homepage": {
-      "URL": "http://example.com/",
-      "Locked": true | false,
-      "Additional": ["http://example.org/",
-                     "http://example.edu/"],
-      "StartPage": "none" | "homepage" |  "previous-session"
-    }
-  }
-}
-```
 ### InstallAddonsPermission
 Configure the default extension install policy as well as origins for extension installs are allowed. This policy does not override turning off all extension installs.
 
@@ -2191,6 +2129,46 @@ Software\Policies\Cliqz\SSLVersionMin = "tls1" | "tls1.1" | "tls1.2" | "tls1.3"
 {
   "policies": {
     "SSLVersionMin": "tls1" | "tls1.1" | "tls1.2" | "tls1.3"
+  }
+}
+```
+### Startup
+Configure the default homepage and how Cliqz starts.
+
+`Homepage` specify what you want to do on Cliqz startup with one of three possible options: open FreshTab is default option, open homepage(s) or open blank tab.
+
+`RestoreLastSession` turn on if you need to restore last session on startup.
+
+`ShowHomepage` turn on if you want to open homepage(s) on startup.
+
+`Locked` prevents the user from changing startup preferences.
+
+`URLs` specify list of URL(s) which will be counted as homepage(s).
+
+**Compatibility:** Cliqz 1.27.0\
+**Preferences Affected:** `browser.startup.homepage`,`browser.startup.restoreTabs`,`browser.startup.addFreshTab`
+
+#### Windows
+```
+Software\Policies\Cliqz\Startup\Homepage ="default", "urls", "blank"
+Software\Policies\Cliqz\Startup\Locked = 0x1 | 0x0
+Software\Policies\Cliqz\Startup\RestoreLastSession = 0x1 | 0x0
+Software\Policies\Cliqz\Startup\ShowHomepage = 0x1 | 0x0
+Software\Policies\Cliqz\Startup\URLs\1 = "https://example.org"
+Software\Policies\Cliqz\Startup\URLs\2 = "https://example.edu"
+```
+#### JSON
+```
+{
+  "policies": {
+    "Startup": {
+      "RestoreLastSession": true | false,
+      "ShowHomepage": true | false,
+      "Locked": true | false,
+      "URLs": ["http://example.org/",
+               "http://example.edu/"],
+      "Homepage": ["default", "urls", "blank"]
+    }
   }
 }
 ```

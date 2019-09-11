@@ -66,6 +66,27 @@ Policies can be specified using the Group Policy templates on Windows (https://g
 | **[`SupportMenu`](#supportmenu)** | Add a menuitem to the help menu for specifying support information.
 | **[`WebsiteFilter`](#websitefilter)** | Block websites from being visited.
 
+Not used in Cliqz desktop browser (in compare with Firefox)
+
+| Policy Name | Notes
+| --- | --- |
+| **`DisableFirefoxScreenshots`** |
+| **`DisableFirefoxAccounts`** |
+| **`DisableFirefoxStudies`** |
+| **`DisablePocket`** |
+| **`EnableTrackingProtection`** |
+| **`FirefoxHome`** |
+| **`Homepage`** | Use [`Startup`](#startup) instead
+| **`NewTabPage`** | Use [`Startup`](#startup) instead
+| **`RequestedLocales`** |
+| **`SearchBar`** |
+| **`SearchEngines`** |
+| **`SearchEngines -> Default`** |
+| **`SearchEngines -> PreventInstalls`** |
+| **`SearchEngines -> Remove`** |
+| **`SearchEngines -> Add`** |
+| **`SearchSuggestEnabled`** |
+
 ### AppUpdateURL
 
 Change the URL for application update.
